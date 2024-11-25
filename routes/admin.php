@@ -8,7 +8,7 @@ Route::prefix('admin')->group(function() {
     Route::get('/', ['as' => 'admin.index', 'uses' => 'App\Livewire\Admin\Auth\LoginComponent']);
 
     Route::get('/login', ['as' => 'admin.login', 'uses' => 'App\Livewire\Admin\Auth\LoginComponent']);
-    Route::post('/loginprocess', ['as' => 'admin.login', 'uses' => 'App\Http\Controllers\Admin\Auth\LoginController@loginprocess']);
+    Route::post('/loginprocess', ['as' => 'admin.loginprocess', 'uses' => 'App\Http\Controllers\Admin\Auth\LoginController@loginprocess']);
     Route::post('/logout', ['as' => 'admin.logout', 'uses' => 'App\Http\Controllers\Admin\Auth\LoginController@logout']);
 
     Route::middleware(['auth:admin'])->group(function () {
