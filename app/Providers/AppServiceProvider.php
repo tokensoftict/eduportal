@@ -8,6 +8,7 @@ use App\Listeners\StudentRejected as StudentRejectedListener;
 use App\Events\StudentAdmitted;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -24,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
             return Settings::make(storage_path('app/settings.json'));
         });
 
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
     }
 
     /**
