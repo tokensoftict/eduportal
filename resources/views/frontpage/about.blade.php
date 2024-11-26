@@ -50,7 +50,7 @@
                         <div class="about-singel-items mt-30">
                             <span>01</span>
                             <h4>Why Choose us</h4>
-                            <p>We provide conusive learning environment, with seamless programme programme without strike, and experienced friendly instructors and free accomodation for the first 50 candidates</p>
+                            <p>We provide conducive learning environment, with seamless programme devoid of strike, candidates would have access to experienced and friendly instructors.</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">

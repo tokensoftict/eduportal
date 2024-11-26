@@ -25,9 +25,9 @@
                 <div class="col-lg-8">
                     <div class="header-contact text-lg-left text-center">
                         <ul>
-                            <li><img src="{{ asset("frontpage/images/all-icon/call.png") }}" alt="icon"><span></span></li>
+                            <li><img src="{{ asset("frontpage/images/all-icon/call.png") }}" alt="icon"><span>+2347032077620</span></li>
                             <li><img src="{{ asset("frontpage/images/all-icon/email.png") }}" alt="icon"><span>info@eduverifiedportal.com</span></li>
-                            <li><img src="{{ asset("frontpage/images/all-icon/map.png") }}" alt="icon"><span></span></li>
+                            <li><img src="{{ asset("frontpage/images/all-icon/map.png") }}" alt="icon"><span>Kwara State Library Complex, Ilorin</span></li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                                     <a href="{{ route('about') }}">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="">Courses</a>
+                                    <a href="#">Courses</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#">Contact</a>

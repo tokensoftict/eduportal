@@ -6,23 +6,23 @@
 
     <form @if(\session()->has('success')) style="display: none;"  @endif  wire:submit.prevent="sign_up">
         <div class="singel-form">
-            <input type="text"  wire:model.defer="firstname" placeholder="Your First Name">
+            <input type="text"  wire:model.defer="firstname" placeholder="Surname">
             @error('firstname') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
-            <input type="text"  wire:model.defer="lastname" placeholder="Your Last Name">
+            <input type="text"  wire:model.defer="lastname" placeholder="Firstname">
             @error('lastname') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
-            <input type="text"  wire:model.defer="middlename" placeholder="Your Middle Name">
+            <input type="text"  wire:model.defer="middlename" placeholder="Middlename">
             @error('middlename') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
-            <input type="email"  wire:model.defer="email" placeholder="Your Email Address">
+            <input type="email"  wire:model.defer="email" placeholder="Email Address">
             @error('email') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
-            <input type="text"  wire:model.defer="phone" placeholder="Your Phone">
+            <input type="text"  wire:model.defer="phone" placeholder="Phone">
             @error('phone') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
