@@ -6,8 +6,16 @@
 
     <form @if(\session()->has('success')) style="display: none;"  @endif  wire:submit.prevent="sign_up">
         <div class="singel-form">
-            <input type="text"  wire:model.defer="name" placeholder="Your Full Name">
-            @error('name') <br/><span class="text-danger">{{ $message }}</span> @enderror
+            <input type="text"  wire:model.defer="firstname" placeholder="Your First Name">
+            @error('firstname') <br/><span class="text-danger">{{ $message }}</span> @enderror
+        </div>
+        <div class="singel-form">
+            <input type="text"  wire:model.defer="lastname" placeholder="Your Last Name">
+            @error('lastname') <br/><span class="text-danger">{{ $message }}</span> @enderror
+        </div>
+        <div class="singel-form">
+            <input type="text"  wire:model.defer="middlename" placeholder="Your Middle Name">
+            @error('middlename') <br/><span class="text-danger">{{ $message }}</span> @enderror
         </div>
         <div class="singel-form">
             <input type="email"  wire:model.defer="email" placeholder="Your Email Address">

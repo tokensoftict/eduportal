@@ -9,13 +9,9 @@
                 font-weight: bold;
                 color: #2A73E8;
                 letter-spacing: 2px;
-                text-transform: uppercase;
-                background: linear-gradient(90deg, #2A73E8, #32CD32);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                display: inline-block;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); "
-                   href="{{ route("index") }}">
+                text-transform: uppercase;"
+                   href="{{ route("index") }}"
+                >
                     EDUVERIFIED
                 </a>
             @else
@@ -25,13 +21,9 @@
                 font-weight: bold;
                 color: #2A73E8;
                 letter-spacing: 2px;
-                text-transform: uppercase;
-                background: linear-gradient(90deg, #2A73E8, #32CD32);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                display: inline-block;
-                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); "
-                   href="{{ route("index") }}">
+                text-transform: uppercase;"
+                   href="{{ route("index") }}"
+                >
                     EDUVERIFIED
                 </a>
             @endif

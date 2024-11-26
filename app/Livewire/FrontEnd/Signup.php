@@ -9,14 +9,16 @@ use Livewire\Component;
 
 class Signup extends Component
 {
-    public string $name;
+    public string $firstname, $lastname, $middlename;
     public string $email;
     public string $phone;
     public string $password;
     public string $password_confirmation;
 
     protected $rules = [
-        'name' => 'required|max:255|', //regex:/^[A-Z\s]+$/
+        'firstname' => 'required|max:255|', //regex:/^[A-Z\s]+$/
+        'lastname' => 'required|max:255|', //regex:/^[A-Z\s]+$/
+        'middlename' => 'required|max:255|', //regex:/^[A-Z\s]+$/
         'email' => 'required|email|unique:students,email',
         'phone' => 'required|min:11|max:11|unique:students,phone',
         'password' => 'required|min:6|confirmed',
@@ -29,7 +31,9 @@ class Signup extends Component
             $this->validate();
 
             $data = [
-                'name' => $this->name,
+                'firstname' => $this->firstname,
+                'lastname' => $this->lastname,
+                'middlename' => $this->middlename,
                 'email' => $this->email,
                 'phone' => $this->phone,
                 'password' => $this->password,

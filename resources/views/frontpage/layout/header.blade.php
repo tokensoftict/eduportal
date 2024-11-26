@@ -25,9 +25,9 @@
                 <div class="col-lg-8">
                     <div class="header-contact text-lg-left text-center">
                         <ul>
-                            <li><img src="{{ asset("frontpage/images/all-icon/call.png") }}" alt="icon"><span>(124) 123 675 598</span></li>
-                            <li><img src="{{ asset("frontpage/images/all-icon/email.png") }}" alt="icon"><span>info@yourmail.com</span></li>
-                            <li><img src="{{ asset("frontpage/images/all-icon/map.png") }}" alt="icon"><span>127/5 Mark street, New york</span></li>
+                            <li><img src="{{ asset("frontpage/images/all-icon/call.png") }}" alt="icon"><span></span></li>
+                            <li><img src="{{ asset("frontpage/images/all-icon/email.png") }}" alt="icon"><span>info@eduverifiedportal.com</span></li>
+                            <li><img src="{{ asset("frontpage/images/all-icon/map.png") }}" alt="icon"><span></span></li>
                         </ul>
                     </div>
                 </div>
@@ -44,29 +44,50 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </div> <!-- header top -->
-<style>
-    .logo {
-        font-family: 'Arial Black', Arial, sans-serif;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #2A73E8;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        background: linear-gradient(90deg, #2A73E8, #32CD32);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        display: inline-block;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }
-</style>
+    <style>
+        .logo-container {
+            text-align: center; /* Center-aligns the logo and tagline */
+            display: inline-block; /* Keeps the logo compact */
+        }
+        .logo {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2A73E8;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #2A73E8, #32CD32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .powered-by {
+            font-family: 'Arial Black', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #2A73E8, #32CD32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-size: 0.75rem; /* Smaller size for the tagline */
+            color: #555; /* Subtle, neutral color */
+            margin-top: -5px; /* Space between logo and tagline */
+            text-align: left;
+        }
+    </style>
     <div class="navigation navigation-2">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-lg-11 col-md-10 col-sm-9 col-9">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand logo" href="{{ route("index") }}">
-                            EDUVERIFIED
-                        </a>
+                        <div class="logo-container">
+                            <a class="navbar-brand logo" href="{{ route("index") }}">
+                                EDUVERIFIED
+                            </a>
+                            <div class="powered-by">Powered by Zenith Academy</div>
+                        </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>

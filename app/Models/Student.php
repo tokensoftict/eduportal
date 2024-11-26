@@ -95,7 +95,9 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
 	];
 
 	protected $fillable = [
-		'name',
+		'firstname',
+        'lastname',
+        'middlename',
 		'email',
 		'email_verified_at',
 		'password',
@@ -133,6 +135,12 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
         'application_fee_transaction_id',
         'acceptance_fee_transaction_id'
 	];
+
+
+    public function getNameAttribute()
+    {
+        return "$this->firstname $this->lastname $this->middlename";
+    }
 
 	public function country()
 	{
