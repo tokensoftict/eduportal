@@ -20,7 +20,7 @@ class WaitingForApplication extends Component
     public function mount()
     {
         $this->paymentData = app(Settings::class)->all();
-        $this->charges = PaystackRepository::calculateCharges($this->paymentData['acceptance_fee']);
+        //$this->charges = PaystackRepository::calculateCharges($this->paymentData['acceptance_fee']);
     }
 
     public function generateTransaction()

@@ -20,7 +20,7 @@ class StudentConfirmation extends StepComponent
     public function mount()
     {
         $this->paymentData = app(Settings::class)->all();
-        $this->charges = PaystackRepository::calculateCharges($this->paymentData['application_fee']);
+        //$this->charges = PaystackRepository::calculateCharges($this->paymentData['application_fee']);
     }
     public function render()
     {
