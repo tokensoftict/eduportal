@@ -34,9 +34,8 @@
                 <div class="col-lg-4">
                     <div class="header-social text-lg-right text-center">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.facebook.com/zenithalevels"><i class="fa fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
