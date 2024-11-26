@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use App\Http\Middleware\RedirectIfNotAuthenticated;
 
 Route::prefix('student')->namespace('App\Http\Controllers\Student')->group(function() {
     Volt::route('/', 'student.pages.auth.login')->name('student.index');
@@ -12,14 +13,14 @@ Route::prefix('student')->namespace('App\Http\Controllers\Student')->group(funct
     Route::get('logout', ['as' => 'student.logout', 'uses' => 'App\Http\Controllers\Student\Auth\LoginController@logout']);
 
 
-    Route::middleware(['web', 'auth:student'])->group(function () {
+    Route::middleware(['web', "App\Http\Middleware\RedirectIfNotAuthenticated:student"])->group(function () {
         Volt::route('verify-email', 'student.pages.auth.verify-email')->name('student.verification.notice');
         Route::get('verify-email/{id}/{hash}', ['as' => 'student.verification.verify', 'uses' => 'App\Http\Controllers\Student\Auth\VerifyEmailController'])->middleware(['signed', 'throttle:6,1']);
         Volt::route('confirm-password', 'pages.auth.confirm-password')->name('student.password.confirm');
     });
 
-
-    Route::middleware(['auth:student', 'verified'])->group(function(){
+    //'verified'
+    Route::middleware(["App\Http\Middleware\RedirectIfNotAuthenticated:student"])->group(function(){
         Volt::route('/dashboard', 'student.pages.dashboard')->name('student.dashboard');
         Route::get('download-receipt/{transaction}', ['as' => 'student.download.application_receipt', 'uses' => 'DownloadController@downloadApplicationReceipt']);
     });

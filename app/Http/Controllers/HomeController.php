@@ -12,6 +12,10 @@ class HomeController extends Controller
         return view('frontpage.index');
     }
 
+    public function about()
+    {
+        return view('frontpage.about');
+    }
 
     /**
      * @param Transaction $transaction

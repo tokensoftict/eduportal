@@ -46,8 +46,8 @@
     </div> <!-- header top -->
     <style>
         .logo-container {
-            text-align: center; /* Center-aligns the logo and tagline */
-            display: inline-block; /* Keeps the logo compact */
+            text-align: left; /* Center-aligns the logo and tagline */
+             /* Keeps the logo compact */
         }
         .logo {
             font-family: 'Arial Black', Arial, sans-serif;
@@ -59,7 +59,6 @@
             background: linear-gradient(90deg, #2A73E8, #32CD32);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-block;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
         .powered-by {
@@ -100,7 +99,7 @@
                                     <a  href="{{ route("index") }}">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#">About us</a>
+                                    <a href="{{ route('about') }}">About us</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="">Courses</a>

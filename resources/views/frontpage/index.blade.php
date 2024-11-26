@@ -1,6 +1,6 @@
 @extends("frontpage.layout.main")
 @section('title')
-    WELCOME TO EDUCATION
+   EDUVERIFIED PORTAL | POWERED BY ZENITH ACADEMY
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="slider-cont">
-                            <h1 style="font-size: 39px" data-animation="bounceInLeft" data-delay="1s">Welcome to Eduverified Portal,<br/> for Jupeb Programme Mobilization of Adekunle Ajasin University Akungba-Akoko, Ondo State.</h1>
+                            <h1 style="font-size: 39px;line-height: 50px;" data-animation="bounceInLeft" data-delay="1s">Welcome to Eduverified Portal,<br/> for Jupeb Programme Mobilization of Adekunle Ajasin University Akungba-Akoko, Ondo State.</h1>
                             <a data-animation="fadeInUp" data-delay="1.3s" href="{{ route('student.register') }}" class="main-btn">Register Now</a>
                         </div>
                     </div>
