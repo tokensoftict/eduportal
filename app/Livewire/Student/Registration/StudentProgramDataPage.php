@@ -16,7 +16,7 @@ class StudentProgramDataPage extends StepComponent
 
     public function mount() {
         $this->courses = Course::query()->get()->toArray();
-        $this->selectedCourse = auth('student')->user()->course_id;
+        $this->selectedCourse = auth('student')->user()?->course_id;
     }
 
     public function render()
