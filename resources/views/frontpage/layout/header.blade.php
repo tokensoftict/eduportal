@@ -106,7 +106,7 @@
                                 </li>
                                 -->
                                 <li class="nav-item">
-                                    <a href="{{ route('about') }}">Contact</a>
+                                    <a href="{{ route('contact') }}">Contact</a>
                                 </li>
                                 @if(auth('student')->check())
                                     <li class="nav-item pull-right">
