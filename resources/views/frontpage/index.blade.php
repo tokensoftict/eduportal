@@ -18,6 +18,22 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="single-slider slider-2 bg_cover" style="background-image: url({{ asset('img/banner2.jpg') }})" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10">
+                        <div class="slider-cont">
+                            <h1 style="font-size: 39px;line-height: 50px;" data-animation="bounceInLeft" data-delay="1s">Zenith Academy, an accredited affiliate of The Polytechnic Ibadan, <br/>offers weekend part-time Ordinary and Higher Diploma programs.</h1>
+                            <a data-animation="fadeInUp" data-delay="1.3s" href="{{ route('student.register') }}" class="main-btn">Register Now</a>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+
+
     </section>
 
     <section id="category-2-part">
