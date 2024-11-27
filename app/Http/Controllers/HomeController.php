@@ -17,6 +17,11 @@ class HomeController extends Controller
         return view('frontpage.about');
     }
 
+    public function contact()
+    {
+        return view('frontpage.contact');
+    }
+
     /**
      * @param Transaction $transaction
      * @return mixed
