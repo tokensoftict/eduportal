@@ -90,8 +90,8 @@
                                         <i class="fa fa-location-arrow"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>I. Kwara State Library Complex,<br/>
-                                            No 1, Zulu Gambari road,<br/>
+                                        <p>Kwara State Library Complex,
+                                            No 1, Zulu Gambari road,
                                             Ilorin, Kwara State.
                                         </p>
                                     </div>
