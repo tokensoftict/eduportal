@@ -57,14 +57,14 @@
                         <div class="about-singel-items mt-30">
                             <span>02</span>
                             <h4>Our Mission</h4>
-                            <p></p>
+                            <p>We focus on making tertiary education accessible to all intended candidate, by removing all bottle neck that could pose hitches to accessibility.</p>
                         </div> <!-- about singel -->
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>03</span>
-                            <h4>Our vission</h4>
-                            <p></p>
+                            <h4>Our vision</h4>
+                            <p>In the nearest future, our organization of Zenith Academy would be household name.</p>
                         </div> <!-- about singel -->
                     </div>
                 </div> <!-- row -->

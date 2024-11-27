@@ -30,7 +30,7 @@
                     </div>
                     <div class="about-cont">
                         <p>Zenith Academy, the Consultant to Adekunle Ajasin University, Akungba on mobilization of candidates for Jupeb- A- level programme, invite suitably qualified candidate for 2024/2025 academic session of Adekunle Ajasin University Jupeb programme.</p>
-                        <p>Venue: The lectures shall take place only in the University campus.</p>
+                        <p>Venue: The lectures shall take place only on the University campus.</p>
                     </div>
                     <div class="about-cont">
                         <p>Overview of the programme : Jupeb-A- level programme is an advanced level course, basically for a year duration. Candidates undergoing the course are assumed to be in 100 level in the university, upon completion of the programme, candidates shall sit for national examination, conducted by Jupeb examination body, with venue at Adekunle Ajasin university. The result of the examination, is what various candidates would use to obtain Direct Entry form ( DE )from Jamb, in order to process 200 level admission into university of their choice.</p>
