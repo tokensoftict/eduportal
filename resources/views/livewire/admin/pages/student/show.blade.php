@@ -49,7 +49,7 @@ new #[Layout('admin.app')] class extends Component {
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
                                             Full name : <br/>
-                                            <h6>{{ $student->name }}</h6>
+                                            <h6>{{ $student?->name ?? "" }}</h6>
                                             <hr/>
                                             Status : <span class="{{ \App\Classes\Settings::ApplicationStatusLabel($student->status) }}">{{ \App\Classes\Settings::ApplicationStatus($student->status) }}</span>
                                         </div>

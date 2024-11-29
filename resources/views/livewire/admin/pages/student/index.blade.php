@@ -102,10 +102,10 @@ new #[Layout('admin.app')] class extends Component {
                         @foreach(\App\Models\Student::all() as $student)
                             <tr>
                                 <td>{{++$count}}</td>
-                                <td>{{$student->name}}</td>
+                                <td>{{$student?->name ?? ""}}</td>
                                 <td>{{$student->email}}</td>
                                 <td>{{$student->phone}}</td>
-                                <td>{{$student->course->name}}</td>
+                                <td>{{$student?->course?->name ?? ""}}</td>
                                 <td>
                                     <strong class="{{ \App\Classes\Settings::ApplicationStatusLabel($student->status) }}">{{ \App\Classes\Settings::ApplicationStatus($student->status) }}</strong>
                                 </td>
