@@ -197,15 +197,15 @@ new #[Layout('admin.app')] class extends Component {
                                     <table class="table table-bordered">
                                         <tr>
                                             <th>First Sitting Exam Type</th>
-                                            <th>{{ $student?->first_sitting_grade['examType'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examType'] ?? "" }}</th>
                                         </tr>
                                         <tr>
                                             <th>First Sitting Exam Number</th>
-                                            <th>{{ $student?->first_sitting_grade['examNumber'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examNumber'] ?? "" }}</th>
                                         </tr>
                                         <tr>
                                             <th>First Sitting Exam Year</th>
-                                            <th>{{ $student?->first_sitting_grade['examYear'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examYear'] ?? "" }}</th>
                                         </tr>
                                     </table>
                                     <table class="table  table-bordered">
@@ -216,7 +216,7 @@ new #[Layout('admin.app')] class extends Component {
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($student?->first_sitting_grade as $key => $sitting)
+                                        @foreach(($student?->first_sitting_grade ?? []) as $key => $sitting)
                                             @if(is_numeric($key))
                                                 <tr>
                                                     <td>{{ \App\Models\Subject::find($student?->first_sitting_grade[$key]['subject'])->name }}</td>
@@ -269,15 +269,15 @@ new #[Layout('admin.app')] class extends Component {
                                     <table class="table table-bordered">
                                         <tr>
                                             <th>First Sitting Exam Type</th>
-                                            <th>{{ $student?->first_sitting_grade['examType'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examType'] ?? "" }}</th>
                                         </tr>
                                         <tr>
                                             <th>First Sitting Exam Number</th>
-                                            <th>{{ $student?->first_sitting_grade['examNumber'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examNumber'] ?? "" }}</th>
                                         </tr>
                                         <tr>
                                             <th>First Sitting Exam Year</th>
-                                            <th>{{ $student?->first_sitting_grade['examYear'] }}</th>
+                                            <th>{{ $student?->first_sitting_grade['examYear'] ?? "" }}</th>
                                         </tr>
                                     </table>
                                     <table class="table  table-bordered">
@@ -288,7 +288,7 @@ new #[Layout('admin.app')] class extends Component {
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($student?->first_sitting_grade as $key => $sitting)
+                                        @foreach(($student?->first_sitting_grade ?? []) as $key => $sitting)
                                             @if(is_numeric($key))
                                                 <tr>
                                                     <td>{{ \App\Models\Subject::find($student?->first_sitting_grade[$key]['subject'])->name }}</td>
@@ -303,7 +303,7 @@ new #[Layout('admin.app')] class extends Component {
                         @endif
                         <h3 class="mb-2">Document(s) Uploaded</h3>
                         <table class="table table-bordered">
-                            @foreach($student->document_uploaded as $key => $document)
+                            @foreach(($student?->document_uploaded ?? []) as $key => $document)
                                 <tr>
                                     <th>{{ \App\Models\DocumentUpload::find($document['type'])->name }}</th>
                                     <td class="text-right"><a class="btn btn-sm btn-success" target="_blank" href="{{ asset("storage/".$document['filename']) }}">View File <i class="fa fa-eye"></i></a></td>
