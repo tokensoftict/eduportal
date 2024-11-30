@@ -52,7 +52,10 @@
             <div class="card-footer">
                 <div class="row">
                     <div class="col-6 text-left">
-                        <button type="button" wire:click="back" class="btn btn-danger btn-lg">Back</button>
+                        <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
+                            <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
+                            Back
+                        </button>
                     </div>
                 </div>
             </div>
