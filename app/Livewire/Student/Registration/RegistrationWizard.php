@@ -14,6 +14,7 @@ class RegistrationWizard extends WizardComponent
             StudentProgramDataPage::class,
             StudentOLevelDataPage::class,
             StudentFileUpload::class,
+            StudentAlevelSubjects::class,
             StudentDataPreview::class,
             StudentConfirmation::class
         ];

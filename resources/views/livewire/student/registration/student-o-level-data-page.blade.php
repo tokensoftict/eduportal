@@ -42,6 +42,10 @@
                                         <th>1st Sitting Exam Year</th>
                                         <th><input wire:model="firstSitting.examYear" class="form-control" type="text" ></th>
                                     </tr>
+                                    <tr>
+                                        <th>1st Sitting Exam Type(e.g June/July)</th>
+                                        <th><input wire:model="firstSitting.examMonth" class="form-control" type="text" ></th>
+                                    </tr>
                                 </table>
                                 <table class="table table-info table-bordered">
                                     <thead>
@@ -118,6 +122,10 @@
                                         <th>2nd Sitting Exam Year</th>
                                         <th><input wire:model="secondSitting.examYear" class="form-control" type="text" ></th>
                                     </tr>
+                                    <tr>
+                                        <th>2nd Sitting Exam Type(e.g June/July)</th>
+                                        <th><input wire:model="secondSitting.examMonth" class="form-control" type="text" ></th>
+                                    </tr>
                                 </table>
                                 <table class="table table-info table-bordered">
                                     <thead>
@@ -180,10 +188,16 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-6 text-left">
-                            <button type="button" wire:click="back" class="btn btn-danger btn-lg">Back</button>
+                            <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
+                                Back
+                            </button>
                         </div>
                         <div class="col-6 text-right">
-                            <button type="submit" class="btn btn-success btn-lg">Save Changes and Continue</button>
+                            <button type="submit"  class="btn btn-success btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="store" class="fa fa-spin fa-spinner" role="status"></span>
+                                Save Changes and Continue
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -191,9 +205,8 @@
         </div>
     </div>
 </div>
-
+@script
 <script>
-    window.addEventListener('load', function (){
         $(document).ready(function() {
             $('.sittings').on('change', function(){
                 if($(this).val() == "2") {
@@ -209,10 +222,12 @@
                 $('#secondSitting').attr('style', 'display: none');
             }
         })
-    });
+
+        $('.sittings').val('{{ $sittings }}').trigger('change');
 
     function triggerChange(name, obj, live) {
         @this.set(name, $(obj).val(), live);
     }
 
 </script>
+@endscript

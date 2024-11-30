@@ -81,6 +81,7 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
 		'first_sitting_grade' => 'json',
 		'second_sitting_grade' => 'json',
         'document_uploaded' => 'json',
+        'a_level_subjects' => 'json',
 		'course_id' => 'int',
         'no_of_sittings' => 'int',
         'password' => 'hashed',
@@ -133,7 +134,8 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
         'document_uploaded',
         'status',
         'application_fee_transaction_id',
-        'acceptance_fee_transaction_id'
+        'acceptance_fee_transaction_id',
+        'a_level_subjects'
 	];
 
 

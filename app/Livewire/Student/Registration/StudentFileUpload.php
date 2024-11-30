@@ -18,6 +18,7 @@ class StudentFileUpload extends StepComponent
     public array $documentUploads = [];
 
     public array $userdocumentUploaded = [];
+    public array $myDocumentUploaded = [];
 
     public function render()
     {
@@ -27,6 +28,29 @@ class StudentFileUpload extends StepComponent
     public function mount()
     {
         $this->documentUploads = DocumentUpload::query()->pluck('name', 'id')->toArray();
+        $user = auth('student')->user();
+        $this->userdocumentUploaded = $user->document_uploaded ?? [];
+
+        foreach ($this->userdocumentUploaded as $key => $value) {
+            $filename = $this->userdocumentUploaded[$key]['filename'];
+            $filename = explode("&&&&", $filename);
+            $this->myDocumentUploaded[$key]['name'] = $filename[1];
+            $this->uploadedFiles[$filename[0]] =$filename;
+        }
+
+    }
+
+
+    public function deleteFile($file,$key)
+    {
+        @unlink(storage_path('app/public/'.$file));
+        unset($this->userdocumentUploaded[$key]);
+        unset($this->uploadedFiles[$file]);
+
+        $user = auth('student')->user();
+        $user->document_uploaded = $this->userdocumentUploaded;
+        $user->save();
+
     }
 
     #[On('filepond-upload-finished')]
@@ -35,6 +59,8 @@ class StudentFileUpload extends StepComponent
         $name = $this->file->store('documents', 'public');
         $this->uploadedFiles[$name] = $this->file->getClientOriginalName();
         $this->cacheFiles[$file] = $name;
+
+
     }
 
     #[On('filepond-upload-reverted')]

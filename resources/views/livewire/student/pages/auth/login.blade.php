@@ -45,11 +45,11 @@ new #[Layout('frontpage.layout.main')] class extends Component
                         <form  wire:submit="login">
                             <div class="singel-form">
                                 <div class="singel-form">
-                                    <input type="email"  wire:model.defer="form.user_name" placeholder="Your Email Address">
+                                    <input type="email"  wire:model.defer="form.user_name" placeholder="Email Address">
                                     @error('user_name') <br/><span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="singel-form">
-                                    <input type="password"  wire:model.defer="form.password" placeholder="Your Password">
+                                    <input type="password"  wire:model.defer="form.password" placeholder="Password">
                                     @error('password') <br/><span class="text-danger">{{ $message }}</span> @enderror
                                 </div>
                                 <a href="{{ route('student.password.request') }}">Forgot Password</a>

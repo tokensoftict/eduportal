@@ -254,12 +254,34 @@
                             </div>
                         </div>
                     @endif
+
+                    <h3 class="mb-2">Student A-Level Details</h3>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th class="text-right">Subject</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($student->a_level_subjects as $aLevelSubject)
+                            <tr>
+                                @php
+                                    $sub = \App\Models\Subject::find($aLevelSubject);
+                                @endphp
+                                <td>{{ $loop->iteration }}</td>
+                                <td class="text-right">{{ $sub->name }}</td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                     <h3 class="mb-2">Document(s) Uploaded</h3>
                     <table class="table table-bordered">
                         @foreach($student->document_uploaded as $key => $document)
                             <tr>
                                 <th>{{ \App\Models\DocumentUpload::find($document['type'])->name }}</th>
-                                <td class="text-right"><a target="_blank" href="{{ asset("storage/".$document['filename']) }}">Download File</a></td>
+
+                                <td class="text-right"><a target="_blank" href="{{ asset("storage/".( explode("&&&&", $document['filename'])[0] ?? "" )) }}">Download File</a></td>
                             </tr>
                         @endforeach
                     </table>

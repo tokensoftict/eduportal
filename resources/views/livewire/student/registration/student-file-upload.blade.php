@@ -1,4 +1,4 @@
-<div id="category-2-part" style="margin-bottom: 30px; height: 70vh">
+<div id="category-2-part" style="margin-bottom: 30px; height: auto; min-height: 70vh">
     <div class="container">
         <div class="card">
             <form wire:submit.prevent="store">
@@ -17,11 +17,12 @@
                                         <th>#</th>
                                         <th class="text-center">Document Type</th>
                                         <th class="text-center">Document Uploaded</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @php
-                                    $loopDocumentUploads = $documentUploads;
+                                        $loopDocumentUploads = $documentUploads;
                                     @endphp
                                     @foreach($documentUploads as $keys =>$documentUpload)
                                         <tr>
@@ -38,9 +39,25 @@
                                                 <select class="form-control" wire:model="userdocumentUploaded.{{ $keys }}.filename" onchange="triggerChange('userdocumentUploaded.{{ $keys }}.filename', this, false)">
                                                     <option>Select Uploaded Document</option>
                                                     @foreach($uploadedFiles as $key =>$file)
-                                                        <option value="{{ $key }}">{{ $file }}</option>
+                                                        @if(is_array($file))
+                                                            <option value="{{ $key }}&&&&{{ $file[1] }}">{{ $file[1] }}</option>
+                                                        @else
+                                                            <option value="{{ $key }}&&&&{{ $file }}">{{ $file }}</option>
+                                                        @endif
                                                     @endforeach
                                                 </select>
+                                            </td>
+                                            <td>
+                                                @if(isset($this->userdocumentUploaded[$keys]['filename']))
+                                                    @php
+                                                        $filename = $this->userdocumentUploaded[$keys]['filename'];
+                                                        $filename = explode("&&&&", $filename);
+                                                    @endphp
+                                                    <button type="button" href="#" wire:click="deleteFile('{{ $filename[0] }}',{{ $keys }})" wire:loading.attr="disabled" class="btn btn-danger">
+                                                        <span wire:loading wire:target="deleteFile('{{ $filename[0] }}', {{ $keys }})" class="fa fa-spin fa-spinner" role="status"></span>
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                @endif
                                             </td>
                                         </tr>
                                     @endforeach
@@ -54,10 +71,16 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-6 text-left">
-                            <button type="button" wire:click="back" class="btn btn-danger btn-lg">Back</button>
+                            <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
+                                Back
+                            </button>
                         </div>
                         <div class="col-6 text-right">
-                            <button type="button" wire:click="store" class="btn btn-success btn-lg">Save Changes and Continue</button>
+                            <button type="submit"  class="btn btn-success btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="store" class="fa fa-spin fa-spinner" role="status"></span>
+                                Save Changes and Continue
+                            </button>
                         </div>
                     </div>
                 </div>

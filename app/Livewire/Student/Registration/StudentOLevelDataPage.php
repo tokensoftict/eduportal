@@ -29,20 +29,20 @@ class StudentOLevelDataPage extends StepComponent
         $storeFirstSitting = $user->first_sitting_grade ?? [];
         foreach ($storeFirstSitting as $key => $sitting) {
             if(is_numeric($key)) {
-                $this->firstSitting[$key]['subject'] = $sitting['subject'];
-                $this->firstSitting[$key]['grade'] = $sitting['grade'];
+                @$this->firstSitting[$key]['subject'] = $sitting['subject'];
+                @$this->firstSitting[$key]['grade']  = $sitting['grade'];
             } else {
-                $this->firstSitting[$key] = $sitting;
+                @$this->firstSitting[$key] = $sitting;
             }
         }
 
         $storeSecondSitting = $user->second_sitting_grade ?? [];
         foreach ($storeSecondSitting as $key => $sitting) {
             if(is_numeric($key)) {
-                $this->secondSitting[$key]['subject'] = $sitting['subject'];
-                $this->secondSitting[$key]['grade'] = $sitting['grade'];
+                @$this->secondSitting[$key]['subject'] = $sitting['subject'];
+                @$this->secondSitting[$key]['grade'] = $sitting['grade'];
             } else {
-                $this->secondSitting[$key] = $sitting;
+                @$this->secondSitting[$key] = $sitting;
             }
         }
 
@@ -85,6 +85,22 @@ class StudentOLevelDataPage extends StepComponent
 
     public function store()
     {
+        foreach ($this->firstSitting as $key => $sitting) {
+            if(is_numeric($key)) {
+                if($sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null) {
+                    unset($this->firstSitting[$key]);
+                }
+            }
+        }
+
+        foreach ($this->secondSitting as $key => $sitting) {
+            if(is_numeric($key)) {
+                if($sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null)  {
+                    unset($this->secondSitting[$key]);
+                }
+            }
+        }
+
         $user = auth('student')->user();
         $user->first_sitting_grade = $this->firstSitting;
         if($this->sittings == "2") {

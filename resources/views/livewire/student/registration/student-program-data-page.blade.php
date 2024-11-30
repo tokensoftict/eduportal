@@ -24,10 +24,16 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-6 text-left">
-                            <button type="button" wire:click="back" class="btn btn-danger btn-lg">Back</button>
+                            <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
+                                Back
+                            </button>
                         </div>
                         <div class="col-6 text-right">
-                            <button type="submit" class="btn btn-success btn-lg">Save Changes and Continue</button>
+                            <button type="submit"  class="btn btn-success btn-lg" wire:loading.attr="disabled">
+                                <span wire:loading wire:target="store" class="fa fa-spin fa-spinner" role="status"></span>
+                                Save Changes and Continue
+                            </button>
                         </div>
                     </div>
                 </div>
