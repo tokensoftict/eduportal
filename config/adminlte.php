@@ -304,105 +304,127 @@ return [
             'text' => 'Dashboard',
             'url'  => 'admin/dashboard',
             'icon' => 'fas fa-fw fa-tachometer-alt',
+            'can'  => 'admin'
         ],
-        ['header' => 'STUDENT MANAGEMENT'],
+        ['header' => 'STUDENT MANAGEMENT', 'can'  => 'admin',],
         [
             'text'    => 'Students',
             'icon'    => 'fas fa-fw fa-users',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text'=>'List All',
                     'route'=>'student.index',
+                    'can'  => 'admin'
                 ],
             ],
         ],
-        ['header' => 'GENERAL SETTINGS'],
+        ['header' => 'GENERAL SETTINGS', 'can'  => 'admin',],
         [
             'text' => 'System Settings',
             'route'  => 'settings.index',
             'icon' => 'fas fa-fw fa-peace',
+            'can'  => 'admin'
         ],
         [
             'text'    => 'Religion',
             'icon'    => 'fas fa-fw fa-peace',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'religions.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'religions.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],
         [
             'text'    => 'Genders',
             'icon'    => 'fas fa-fw fa-user',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'genders.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'genders.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],
         [
             'text'    => 'Fees',
             'icon'    => 'fas fa-fw fa-money-bill-alt',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'fees.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'fees.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],
         [
             'text'    => 'Document Upload',
             'icon'    => 'fas fa-fw fa-file',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'document.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'document.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],
         [
             'text'    => 'General Subjects',
             'icon'    => 'fas fa-fw fa-file',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'general_subjects.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'general_subjects.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],
         [
             'text'    => 'Courses',
             'icon'    => 'fas fa-fw fa-book',
+            'can'  => 'admin',
             'submenu' => [
                 [
                     'text' => 'Add New',
                     'route'  => 'courses.create',
+                    'can'  => 'admin',
                 ],
                 [
                     'text'=>'List All',
                     'route'=>'courses.index',
+                    'can'  => 'admin',
                 ],
             ],
         ],

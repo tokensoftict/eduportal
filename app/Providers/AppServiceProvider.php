@@ -6,10 +6,12 @@ use App\Classes\Settings;
 use App\Events\StudentRejected;
 use App\Listeners\StudentRejected as StudentRejectedListener;
 use App\Events\StudentAdmitted;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         if (config('app.env') === 'production') {
             URL::forceScheme('https');
         }
+
     }
 
     /**
@@ -38,6 +41,19 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
+        Gate::define('student', function ($user) {
+            if(Str::contains(request()->fullUrl(), "portal")) {
+                return true;
+            }
+            return false;
+        });
+
+        Gate::define('admin', function ($user) {
+            if(Str::contains(request()->fullUrl(), "admin")) {
+                return true;
+            }
+            return false;
+        });
     }
 
 

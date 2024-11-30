@@ -4,4 +4,8 @@
 {{ 'admin/loginprocess' }}
 @endsection
 
+@section('dashboard_url')
+    {{ 'admin/dashboard' }}
+@endsection
+
 

@@ -17,6 +17,12 @@ class RedirectIfNotAuthenticated
     public function handle(Request $request, Closure $next, $guard = null)
     {
 
+        if($guard == NULL){
+            if(!\auth()->check()) {
+                return redirect()->route('portal.index');
+            }
+        }
+
         if (!Auth::guard($guard)->check()) {
             // Redirect based on the guard
             if ($guard === 'admin') {

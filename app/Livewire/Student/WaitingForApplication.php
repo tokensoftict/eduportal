@@ -75,7 +75,7 @@ class WaitingForApplication extends Component
                 'title' => 'Your Portal Login Details',
                 'body' => 'Dear <strong>'.$user->name.'</strong>,'.
                     '<p>We are thrilled to welcome you to '.app(Settings::class)->get('name').'! Your admission process is now complete, and you can access your student portal to manage your academic journey.</p> <p>Below are your login details:</p><br/>'.
-                    '<ul><li><strong>Portal URL:</strong> '.route('index').'</li><li><strong>Application Number:</strong> '. $application_number .'</li><li><strong>Password:</strong> '. $password .'</li></ul>'.
+                    '<ul><li><strong>Portal URL:</strong><a href="'.route('portal.index').'">'.route('portal.index').'</a></li><li><strong>Application Number:</strong> '. $application_number .'</li><li><strong>Password:</strong> '. $password .'</li></ul>'.
                     '<p>To access the portal:</p> <ol> <li>Visit the portal using the provided URL.</li> <li>Log in with your username and temporary password.</li> <li>Change your password immediately to ensure the security of your account.</li> </ol> <p>If you encounter any issues while logging in or have questions, please contact our support team.<br/><br/>'.
                     'Warm regards,'
             ];
