@@ -280,7 +280,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($student->a_level_subjects as $aLevelSubject)
+                        @foreach(($student->a_level_subjects ?? []) as $aLevelSubject)
                             <tr>
                                 @php
                                     $sub = \App\Models\AlevelSubject::find($aLevelSubject);
