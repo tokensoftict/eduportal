@@ -16,12 +16,10 @@ class AutoLoginUserWhenVerifyingEmailAddress
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if($request->has("expires") and $request->has('signature') and !Session::has("url.intended")) {
-            auth()->logout();
-            auth('student')->logout();
-            auth('admin')->logout();
-            Session::put("url.intended", $request->fullUrl());
-        }
+        auth()->logout();
+        auth('student')->logout();
+        auth('admin')->logout();
+        Session::put("url.intended", $request->fullUrl());
 
         return $next($request);
     }
