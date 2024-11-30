@@ -16,6 +16,7 @@
                                         <option value="{{ $course['id'] }}">{{ $course['prefix'] }}. {{ $course['name'] }}</option>
                                     @endforeach
                                 </select>
+                                @error('selectedCourse') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
                         </div>
                     </div>

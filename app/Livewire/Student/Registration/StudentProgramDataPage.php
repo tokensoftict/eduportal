@@ -33,6 +33,7 @@ class StudentProgramDataPage extends StepComponent
 
     public function store()
     {
+        $this->validate(['selectedCourse' => 'required']);
         $user = auth('student')->user();
 
         $user->course_id = $this->selectedCourse;
