@@ -5,7 +5,7 @@
 @endsection
 
 @section('dashboard_url')
-{{ 'portal/dashboard' }}
+{{ 'student_portal/dashboard' }}
 @endsection
 
 @section('auth_header')
