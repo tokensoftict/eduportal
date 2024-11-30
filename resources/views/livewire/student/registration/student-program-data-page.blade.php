@@ -10,7 +10,7 @@
                         <div class="col-sm-7 offset-sm-3 col-12 col-lg-7 mt-3">
                             <div class="form-group">
                                 <label><b>Choice of Programme</b></label>
-                                <select wire:model="selectedCourse" class="form-control">
+                                <select required wire:model="selectedCourse" class="form-control">
                                     <option>-Select Course-</option>
                                     @foreach($courses as $course)
                                         <option value="{{ $course['id'] }}">{{ $course['prefix'] }}. {{ $course['name'] }}</option>
