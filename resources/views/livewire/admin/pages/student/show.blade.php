@@ -333,7 +333,7 @@ new #[Layout('admin.app')] class extends Component {
 
                         <h3 class="mb-2">Document(s) Uploaded</h3>
                         <table class="table table-bordered">
-                            @foreach($student->document_uploaded as $key => $document)
+                            @foreach(($student->document_uploaded ?? []) as $key => $document)
                                 <tr>
                                     <th>{{ \App\Models\DocumentUpload::find($document['type'])->name }}</th>
 
