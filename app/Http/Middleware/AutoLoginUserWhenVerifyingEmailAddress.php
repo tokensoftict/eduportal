@@ -18,6 +18,7 @@ class AutoLoginUserWhenVerifyingEmailAddress
     {
         if($request->has("expires") and $request->has('signature') and !Session::has("url.intended")) {
             auth()->logout();
+            auth('student')->logout();
             auth('admin')->logout();
             Session::put("url.intended", $request->fullUrl());
         }
