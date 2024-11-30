@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-Route::prefix('portal')->group(function() {
+Route::prefix('student_portal')->group(function() {
 
     Route::get('/', ['as' => 'portal.index', 'uses' => 'App\Livewire\Portal\Auth\LoginComponent']);
 
