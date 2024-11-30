@@ -1,7 +1,7 @@
 @extends('adminlte::auth.auth-page', ['auth_type' => 'login'])
 
 @section('login_url')
-{{ 'student_portal/dashboard' }}
+{{ 'student_portal/loginprocess' }}
 @endsection
 
 @section('dashboard_url')
