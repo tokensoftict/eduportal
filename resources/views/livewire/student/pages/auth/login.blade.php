@@ -20,8 +20,13 @@ new #[Layout('frontpage.layout.main')] class extends Component
         $this->form->authenticate();
 
         Session::regenerate();
+        $redirect = session('url.intended', false);
 
-        $this->redirect(session('url.intended', route("student.dashboard")));
+        if($redirect) {
+            $this->redirect($redirect);
+        } else {
+            $this->redirect(route("student.dashboard"));
+        }
     }
 }
 ?>
@@ -55,8 +60,8 @@ new #[Layout('frontpage.layout.main')] class extends Component
                                 <a href="{{ route('student.password.request') }}">Forgot Password</a>
                             </div>
                             <div class="singel-form">
-                                <button class="main-btn" type="submit" wire:target="sign_up" wire:loading.attr="disabled">Login
-                                    <span wire:loading wire:target="sign_up" class="fa fa-spin fa-spinner" role="status"></span>
+                                <button class="main-btn" type="submit" wire:target="login" wire:loading.attr="disabled">Login
+                                    <span wire:loading wire:target="login" class="fa fa-spin fa-spinner" role="status"></span>
                                 </button>
                             </div>
                             <div align="center" class="mt-1">New Register ? <a href="{{ route('student.register') }}">Register Now</a> </div>

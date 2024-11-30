@@ -12,9 +12,11 @@ Route::prefix('student')->namespace('App\Http\Controllers\Student')->group(funct
     Volt::route('reset-password/{token}', 'student.pages.auth.reset-password')->name('password.reset');
     Route::get('logout', ['as' => 'student.logout', 'uses' => 'App\Http\Controllers\Student\Auth\LoginController@logout']);
 
-
-    Route::middleware(['web', "App\Http\Middleware\RedirectIfNotAuthenticated:student"])->group(function () {
+    Route::middleware([\App\Http\Middleware\AutoLoginUserWhenVerifyingEmailAddress::class])->group(function () {
         Volt::route('verify-email', 'student.pages.auth.verify-email')->name('student.verification.notice');
+    });
+
+    Route::middleware(["App\Http\Middleware\RedirectIfNotAuthenticated:student"])->group(function () {
         Route::get('verify-email/{id}/{hash}', ['as' => 'student.verification.verify', 'uses' => 'App\Http\Controllers\Student\Auth\VerifyEmailController'])->middleware(['signed', 'throttle:6,1']);
         Volt::route('confirm-password', 'pages.auth.confirm-password')->name('student.password.confirm');
     });
