@@ -7,11 +7,13 @@ use Livewire\Attributes\Layout;
 
 new #[Layout('admin.app')] class extends Component {
     public array $data = [];
+    public array $sessions = [];
 
     public function mount()
     {
         $settings = app(Settings::class);
         $this->data = $settings->all();
+        $this->sessions = Settings::generateSessions();
     }
 
     public function store()
@@ -64,6 +66,14 @@ new #[Layout('admin.app')] class extends Component {
                         <div class="form-group">
                             <label for="name">Acceptance Fee:</label>
                             <input type="text" wire:model="data.acceptance_fee" class="form-control" name="acceptance_fee"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Current Session:</label>
+                            <select wire:model="data.session" class="form-control">
+                                @foreach($sessions as $session)
+                                    <option value="{{ $session }}">{{ $session }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <h3>Paystack Settings</h3>
                         <div class="form-group">

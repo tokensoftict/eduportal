@@ -41,7 +41,6 @@ class StudentConfirmation extends StepComponent
             "email" => auth('student')->user()->email,
             "phoneNumber" => auth('student')->user()->phone,
             "name" => auth('student')->user()->name,
-            "session" => "2024-2025",
             "semester" => "First",
             "gateway" => "PAYSTACK",
             "paymentable_type" => "Application fee",

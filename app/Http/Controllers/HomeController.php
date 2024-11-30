@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use App\Models\Transaction;
 use PDF;
 class HomeController extends Controller
@@ -31,7 +32,10 @@ class HomeController extends Controller
         ini_set('memory_limit','48M');
 
         $pdf = PDF::loadView("pdfs.payment",['payment' => $transaction]);
+        $pdf->getMpdf()->SetWatermarkText(strtoupper("Paid"));
+        $pdf->getMpdf()->showWatermarkText = true;
 
         return $pdf->stream('payment.pdf');
     }
+
 }

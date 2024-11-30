@@ -1,4 +1,4 @@
-<div id="category-2-part" style="margin-bottom: 30px; height: 70vh">
+<div id="category-2-part" style="margin-bottom: 30px; height: auto; min-height: 70vh">
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -9,6 +9,22 @@
                     <div class="row">
                         <div class="col-sm-6 col-12 col-lg-6 offset-sm-3 offset-lg-3 text-center">
                             <table class="table table-bordered">
+                                <tr>
+                                    <th class="text-left">Student Name</th>
+                                    <td class="text-right"><strong>{{ auth('student')->user()->name }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Phone Number</th>
+                                    <td class="text-right"><strong>{{ auth('student')->user()->phone }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Email Address</th>
+                                    <td class="text-right"><strong>{{ auth('student')->user()->email }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <th class="text-left">Current Session</th>
+                                    <td class="text-right"><strong>{{ app(\App\Classes\Settings::class)->get("session") }}</strong></td>
+                                </tr>
                                 <tr>
                                     <th class="text-left">Payment</th>
                                     <td class="text-right">Application Form</td>

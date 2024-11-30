@@ -3,7 +3,7 @@
 namespace App\Livewire\Student\Registration;
 
 
-use App\Models\Subject;
+use App\Models\AlevelSubject;
 use Spatie\LivewireWizard\Components\StepComponent;
 
 class StudentAlevelSubjects extends StepComponent
@@ -17,7 +17,7 @@ class StudentAlevelSubjects extends StepComponent
     {
         $user = auth('student')->user();
         $this->aLevelSubjects = $user->a_level_subjects ?? [];
-        $this->subjects = Subject::query()->pluck('name', 'id')->toArray();
+        $this->subjects = AlevelSubject::query()->pluck('name', 'id')->toArray();
     }
 
 

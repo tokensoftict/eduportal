@@ -99,7 +99,7 @@ new #[Layout('admin.app')] class extends Component {
                         </thead>
                         <tbody>
                         @php($count=0)
-                        @foreach(\App\Models\Student::all() as $student)
+                        @foreach(\App\Models\Student::query()->where('session', app(\App\Classes\Settings::class)->get('session'))->get() as $student)
                             <tr>
                                 <td>{{++$count}}</td>
                                 <td>{{$student?->name ?? ""}}</td>

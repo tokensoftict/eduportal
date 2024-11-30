@@ -1,4 +1,4 @@
-<div id="category-2-part" style="margin-bottom: 30px;">
+<div id="category-2-part" style="margin-bottom: 30px; height: auto; min-height: 70vh">
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -10,8 +10,24 @@
                         <tbody>
                         <tr>
                             <td>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
                                 Full name : <br/>
                                 <h6>{{ $student->name }}</h6>
+                                    </div>
+
+                                @php
+                                    $passport = NULL;
+                                       if(isset($student?->document_uploaded[1])){
+                                           $passport =  asset("storage/".(explode("&&&&",$student?->document_uploaded[1]['filename'])[0]));
+                                       }
+                                @endphp
+                                @if($passport !== NULL)
+                                    <div class="col-12 col-sm-6 text-right">
+                                        <img src="{{ $passport }}" class="img-bordered" width="150" height="150"/>
+                                    </div>
+                                @endif
+                                </div>
                             </td>
                             <td>
                                 Nationality : <br/>
@@ -267,7 +283,7 @@
                         @foreach($student->a_level_subjects as $aLevelSubject)
                             <tr>
                                 @php
-                                    $sub = \App\Models\Subject::find($aLevelSubject);
+                                    $sub = \App\Models\AlevelSubject::find($aLevelSubject);
                                 @endphp
                                 <td>{{ $loop->iteration }}</td>
                                 <td class="text-right">{{ $sub->name }}</td>
@@ -281,7 +297,9 @@
                             <tr>
                                 <th>{{ \App\Models\DocumentUpload::find($document['type'])->name }}</th>
 
-                                <td class="text-right"><a target="_blank" href="{{ asset("storage/".( explode("&&&&", $document['filename'])[0] ?? "" )) }}">Download File</a></td>
+                                <td class="text-right">
+                                    <a target="_blank" href="{{ asset("storage/".( explode("&&&&", $document['filename'])[0] ?? "" )) }}">Download File</a>
+                                </td>
                             </tr>
                         @endforeach
                     </table>

@@ -23,5 +23,6 @@ Route::prefix('student')->namespace('App\Http\Controllers\Student')->group(funct
     Route::middleware(["App\Http\Middleware\RedirectIfNotAuthenticated:student"])->group(function(){
         Volt::route('/dashboard', 'student.pages.dashboard')->name('student.dashboard');
         Route::get('download-receipt/{transaction}', ['as' => 'student.download.application_receipt', 'uses' => 'DownloadController@downloadApplicationReceipt']);
+        Route::get('download-app-form/{student}', ['as' => 'student.download.application_app_form', 'uses' => 'DownloadController@downloadApplicationForm']);
     });
 });

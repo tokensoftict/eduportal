@@ -107,12 +107,13 @@ new #[Layout('admin.app')] class extends Component {
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{ route('fees.edit',$fee->id)}}" class="btn btn-primary">Edit</a>
+                                        @if($fee->compulsory !="1")
                                         <form action="{{ route('fees.destroy', $fee->id)}}" method="post">&nbsp;&nbsp;&nbsp;
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger delete-confirm" type="submit">Delete</button>
                                         </form>
-
+                                        @endif
                                     </div>
                                 </td>
                             </tr>

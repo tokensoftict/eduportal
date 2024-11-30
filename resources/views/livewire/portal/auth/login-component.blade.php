@@ -12,9 +12,7 @@
     <h2 align="center">Student Login</h2>
 @endsection
 
-@section('password_reset_url')
-portal/reset/password
-@endsection
+
 
 @section('adminlte_css_pre')
     <link rel="stylesheet" href="{{ asset('vendor/icheck-bootstrap/icheck-bootstrap.min.css') }}">

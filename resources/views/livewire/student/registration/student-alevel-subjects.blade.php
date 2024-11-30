@@ -47,7 +47,7 @@
                                 @foreach($aLevelSubjects as $aLevelSubject)
                                     <tr>
                                         @php
-                                            $sub = \App\Models\Subject::find($aLevelSubject);
+                                            $sub = \App\Models\AlevelSubject::find($aLevelSubject);
                                         @endphp
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $sub->name }}</td>

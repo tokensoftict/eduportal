@@ -50,4 +50,17 @@ class Settings extends Valuestore
         $padStudentID = str_pad($student_id, 4, '0', STR_PAD_LEFT);
         return "JU/".date('Y') ."/". $padStudentID;
     }
+
+
+    static function generateSessions()
+    {
+        $sessions = [];
+        $startYear = date("Y") - 2;
+        for ($i = 0; $i < 5; $i++) {
+            $endYear = $startYear + 1;
+            $sessions[] = "$startYear/$endYear";
+            $startYear++;
+        }
+        return $sessions;
+    }
 }

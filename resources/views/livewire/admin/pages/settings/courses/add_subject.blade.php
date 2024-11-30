@@ -26,14 +26,14 @@ new #[Layout('admin.app')] class extends Component {
         }
 
         foreach (Subject::where('status', 1)->orderBy('name', 'ASC')->get() as $subject) {
-            if(in_array($subject->id, $course->compulsory)) {
+            if(in_array($subject->id, ($course->compulsory ?? []))) {
                 $this->selected_subjects[$subject->id] = true;
             } else {
                 $this->selected_subjects[$subject->id] = false;
             }
         }
 
-        $this->compulsory = $course->compulsory;
+        $this->compulsory = $course->compulsory ?? [];
     }
 
 

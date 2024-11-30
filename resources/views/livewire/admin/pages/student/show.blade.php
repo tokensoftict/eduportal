@@ -53,11 +53,17 @@ new #[Layout('admin.app')] class extends Component {
                                             <hr/>
                                             Status : <span class="{{ \App\Classes\Settings::ApplicationStatusLabel($student->status) }}">{{ \App\Classes\Settings::ApplicationStatus($student->status) }}</span>
                                         </div>
-                                        <!--
-                                        <div class="col-12 col-sm-6 text-right">
-                                            <img src="{{ asset('frontpage/images/course/teacher/t-1.jpg') }}" class="img-bordered" width="100" height="100"/>
-                                        </div>
-                                        -->
+                                        @php
+                                            $passport = NULL;
+                                               if(isset($student?->document_uploaded[1])){
+                                                   $passport =  asset("storage/".(explode("&&&&",$student?->document_uploaded[1]['filename'])[0]));
+                                               }
+                                        @endphp
+                                        @if($passport !== NULL)
+                                            <div class="col-12 col-sm-6 text-right">
+                                                <img src="{{ $passport }}" class="img-bordered" width="150" height="150"/>
+                                            </div>
+                                        @endif
                                     </div>
                                 </td>
                                 <td>
@@ -301,12 +307,39 @@ new #[Layout('admin.app')] class extends Component {
                                 </div>
                             </div>
                         @endif
+
+
+                        <h3 class="mb-2">Student A-Level Details</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th class="text-right">Subject</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($student->a_level_subjects as $aLevelSubject)
+                                <tr>
+                                    @php
+                                        $sub = \App\Models\AlevelSubject::find($aLevelSubject);
+                                    @endphp
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td class="text-right">{{ $sub->name }}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+
+
                         <h3 class="mb-2">Document(s) Uploaded</h3>
                         <table class="table table-bordered">
-                            @foreach(($student?->document_uploaded ?? []) as $key => $document)
+                            @foreach($student->document_uploaded as $key => $document)
                                 <tr>
                                     <th>{{ \App\Models\DocumentUpload::find($document['type'])->name }}</th>
-                                    <td class="text-right"><a class="btn btn-sm btn-success" target="_blank" href="{{ asset("storage/".$document['filename']) }}">View File <i class="fa fa-eye"></i></a></td>
+
+                                    <td class="text-right">
+                                        <a target="_blank" href="{{ asset("storage/".( explode("&&&&", $document['filename'])[0] ?? "" )) }}">Download File</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>

@@ -428,6 +428,34 @@ return [
                 ],
             ],
         ],
+
+
+        //portal Nav items
+        ['header' => 'MY MENU', 'can'  => 'student'],
+        [
+            'text' => 'My Account',
+            'route'  => 'portal.dashboard',
+            'icon' => 'fas fa-fw fa-user',
+            'can'  => 'student'
+        ],
+        [
+            'text' => 'School Fees',
+            'route'  => 'portal.school_fees',
+            'icon' => 'fas fa-fw fa-money-bill-alt',
+            'can'  => 'student'
+        ],
+        [
+            'text' => 'Payment Receipt',
+            'route'  => 'portal.payment_receipt',
+            'icon' => 'fas fa-fw fa-file',
+            'can'  => 'student'
+        ],
+        [
+            'text' => 'Log Out',
+            'route'  => 'portal.logout',
+            'icon' => 'fas fa-fw fa-lock',
+            'can'  => 'student'
+        ],
     ],
 
     /*
@@ -465,6 +493,7 @@ return [
     */
 
     'plugins' => [
+
         'Datatables' => [
             'active' => false,
             'files' => [

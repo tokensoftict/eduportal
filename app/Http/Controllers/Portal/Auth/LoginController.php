@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Portal\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -20,6 +21,9 @@ class LoginController extends Controller
             return redirect()->back()->withInput()->withErrors(['application_number' => "Invalid Application Number or Password combination"]);
         }
 
+        \auth('student')->loginUsingId(auth()->user()->student_id);
+        \auth('student')->setUser(Student::find(auth()->user()->student_id));
+
         Session::regenerate();
         return redirect()->route('portal.dashboard');
     }
@@ -28,6 +32,7 @@ class LoginController extends Controller
     public function logout()
     {
         \auth()->logout();
+        \auth('student')->logout();
         return redirect()->route('portal.index');
     }
 }

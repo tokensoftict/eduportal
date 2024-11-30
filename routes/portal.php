@@ -14,6 +14,10 @@ Route::prefix('portal')->group(function() {
 
     Route::middleware([\App\Http\Middleware\RedirectIfNotAuthenticated::class])->group(function () {
         Volt::route('/dashboard', 'portal.pages.dashboard')->name('portal.dashboard');
+        Volt::route('/school_fees', 'portal.pages.school_fees')->name('portal.school_fees');
+        Volt::route('/payment_receipt', 'portal.pages.payment_receipt')->name('portal.payment_receipt');
+        Route::get('/logout', ['as' => 'portal.logout', 'uses' => 'App\Http\Controllers\Portal\Auth\LoginController@logout']);
+
     });
 
 });

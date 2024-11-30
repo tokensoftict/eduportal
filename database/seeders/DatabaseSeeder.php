@@ -11,14 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-      $this->call(AdminSeeder::class);
-      $this->call(GeneralSubjectSeeder::class);
-      $this->call([
-          CountriesTableSeeder::class,
-          StateTableSeeder::class,
-          LocalgovtSeeder::class,
-          ReligionSeeder::class,
-          GenderSeeder::class
-      ]);
+        $this->call([
+            AdminSeeder::class,
+            GeneralSubjectSeeder::class,
+            CountriesTableSeeder::class,
+            StateTableSeeder::class,
+            LocalgovtSeeder::class,
+            ReligionSeeder::class,
+            GenderSeeder::class,
+            SchoolfessSeeder::class,
+            CourseSeeder::class,
+            AlevelSubjectSeeder::class
+        ]);
     }
 }

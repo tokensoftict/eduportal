@@ -1,8 +1,8 @@
 <div>
-    <div id="category-2-part" style="margin-bottom: 30px;">
+    <div id="category-2-part" style="margin-bottom: 30px; height: auto; min-height: 70vh">
         <div class="container">
             <div class="card">
-                <div class="card-body" style="height: 80vh">
+                <div class="card-body">
                     <h5 class="card-title">Application Status</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Your Application status</h6>
                     <div class="card-body text-center">
@@ -20,6 +20,22 @@
                                     <h4>Acceptance Fee Payment</h4>
                                     <table class="table table-bordered">
                                         <table class="table table-bordered">
+                                            <tr>
+                                                <th class="text-left">Student Name</th>
+                                                <td class="text-right"><strong>{{ auth('student')->user()->name }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left">Phone Number</th>
+                                                <td class="text-right"><strong>{{ auth('student')->user()->phone }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left">Email Address</th>
+                                                <td class="text-right"><strong>{{ auth('student')->user()->email }}</strong></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left">Current Session</th>
+                                                <td class="text-right"><strong>{{ app(\App\Classes\Settings::class)->get("session") }}</strong></td>
+                                            </tr>
                                             <tr>
                                                 <th class="text-left">Payment</th>
                                                 <td class="text-right">Acceptance Fee</td>
@@ -91,19 +107,17 @@
                             <div class="col-12 col-sm-6 offset-sm-3">
                                 <h6 class="mb-2 mt-2">Payment Receipts and Forms</h6>
                                 <table class="table table-bordered">
-                                    <!--
                                     <tr>
                                         <th class="text-left">Application Form</th>
-                                        <td class="text-right"><a href="#" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
+                                        <td class="text-right"><a target="_blank" href="{{ route('student.download.application_app_form', auth('student')->id()) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
                                     </tr>
-                                    -->
                                     <tr>
                                         <th class="text-left">Application Form Receipt</th>
                                         <td class="text-right"><a target="_blank" href="{{ route('student.download.application_receipt', auth('student')->user()->application_fee_transaction_id) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
                                     </tr>
                                     <tr>
                                         <th class="text-left">Acceptance Payment Receipt</th>
-                                        <td class="text-right"><a target="_blank" href="{{ route('student.download.application_receipt', auth('student')->user()->application_fee_transaction_id) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
+                                        <td class="text-right"><a target="_blank" href="{{ route('student.download.application_receipt', auth('student')->user()->acceptance_fee_transaction_id) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
                                     </tr>
                                 </table>
                             </div>
@@ -112,12 +126,12 @@
                             <div class="col-12 col-sm-6 offset-sm-3">
                                 <h6 class="mb-2 mt-2">Payment Receipts and Forms</h6>
                                 <table class="table table-bordered">
-                                    <!--
+
                                     <tr>
                                         <th class="text-left">Application Form</th>
-                                        <td class="text-right"><a href="#" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
+                                        <td class="text-right"><a target="_blank"  href="{{ route('student.download.application_app_form', auth('student')->id()) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>
                                     </tr>
-                                    -->
+
                                     <tr>
                                         <th class="text-left">Application Receipt</th>
                                         <td class="text-right"><a target="_blank" href="{{ route('student.download.application_receipt', auth('student')->user()->application_fee_transaction_id) }}" class="btn btn-sm btn-primary">Download <i class="fa fa-download"></i> </a> </td>

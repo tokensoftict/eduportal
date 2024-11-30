@@ -58,14 +58,10 @@
     <table width="80%" align="center">
         <tr>
             <td width="100%" valign="top" align="center">
-                <img  src="{{ public_path("img/logo.png") }}" alt='Logo'>
-            </td>
-        </tr>
-        <tr>
-            <td width="100%" valign="top" align="center">
                 <p>&nbsp;</p>
                 <h1 align="center" style="text-align: center;margin-top: 40px" >{{ app(\App\Classes\Settings::class)->get('name') }}</h1>
-                <h2 align="center" style="text-align: center;margin-top: 10px; color:red">PAYMENT RECEIPT</h2>
+                <h2 align="center" style="text-align: center;margin-top: 10px;">SESSION : {{ $payment->session }}</h2>
+                <h2 align="center" style="text-align: center;margin-top: 10px; color: red">PAYMENT RECEIPT</h2>
             </td>
         </tr>
     </table>
@@ -74,28 +70,31 @@
 
     <table width="80%" align="center"  id="products" border="1">
         <tr>
-            <td><b>NAME</b></td><td>{{ $payment->name }}</td>
+            <td><b>NAME</b></td><th>{{ $payment->name }}</th>
         </tr>
         <tr>
-            <td><b>PAYMENT FOR</b></td><td>
+            <td><b>PAYMENT FOR</b></td><th>
                 @if(is_null($payment->paymentable_id))
                     {{ strtoupper($payment->paymentable_type) }}
                 @else
-
+                    @php
+                        $paymentt = \App\Models\Fee::find($payment->paymentable_id)->name
+                    @endphp
+                    {{ strtoupper($paymentt) }}
                 @endif
-            </td>
+            </th>
         </tr>
         <tr>
-            <td><b>DATE</b></td><td>{{ $payment->created_at }}</td>
+            <td><b>DATE</b></td><th>{{ $payment->created_at }}</th>
         </tr>
         <tr>
-            <td><b>AMOUNT</b></td><td>{{ number_format($payment->amount,2) }}</td>
+            <td><b>AMOUNT</b></td><th>{{ number_format($payment->amount,2) }}</th>
         </tr>
         <tr>
-            <td><b>PHONE NUMBER</b></td><td>{{ $payment->phoneNumber }}</td>
+            <td><b>PHONE NUMBER</b></td><th>{{ $payment->phoneNumber }}</th>
         </tr>
         <tr>
-            <td><b>EMAIL ADDRESS</b></td><td>{{ $payment->email }}</td>
+            <td><b>EMAIL ADDRESS</b></td><th>{{ $payment->email }}</th>
         </tr>
     </table>
 </div>

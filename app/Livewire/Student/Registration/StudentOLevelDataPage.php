@@ -87,7 +87,7 @@ class StudentOLevelDataPage extends StepComponent
     {
         foreach ($this->firstSitting as $key => $sitting) {
             if(is_numeric($key)) {
-                if($sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null) {
+                if(!isset($sitting['grade']) || !isset($sitting['subject']) || $sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null) {
                     unset($this->firstSitting[$key]);
                 }
             }
@@ -95,7 +95,7 @@ class StudentOLevelDataPage extends StepComponent
 
         foreach ($this->secondSitting as $key => $sitting) {
             if(is_numeric($key)) {
-                if($sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null)  {
+                if(!isset($sitting['grade']) || !isset($sitting['subject']) || $sitting['grade'] == "" || $sitting['grade']== null || $sitting['subject'] == "" || $sitting['subject'] == null)  {
                     unset($this->secondSitting[$key]);
                 }
             }
