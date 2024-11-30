@@ -43,7 +43,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::useBootstrap();
 
         Gate::define('student', function ($user) {
-            if(Str::contains(request()->fullUrl(), "portal4444")) {
+            if(Str::contains(request()->fullUrl(), "portal")) {
                 return true;
             }
             return false;
