@@ -2,6 +2,7 @@
 
 namespace App\Classes;
 
+use App\Models\DocumentUpload;
 use Spatie\Valuestore\Valuestore;
 
 class Settings extends Valuestore
@@ -62,5 +63,16 @@ class Settings extends Valuestore
             $startYear++;
         }
         return $sessions;
+    }
+
+
+    static function checkForPassport($documents)
+    {
+        $passportID = DocumentUpload::where('name', "Passport")->first()->id;
+        foreach ($documents as $document) {
+            if($document['type'] == $passportID) return $document;
+        }
+
+        return DocumentUpload::query()->first();
     }
 }

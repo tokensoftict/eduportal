@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             GeneralSubjectSeeder::class,
             CountriesTableSeeder::class,
+            DocumentUploadSeeder::class,
             StateTableSeeder::class,
             LocalgovtSeeder::class,
             ReligionSeeder::class,

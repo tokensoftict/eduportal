@@ -80,9 +80,10 @@
                         <td width="50%" align="right">
                             @php
                                 $passport = NULL;
-                                   if(isset($student?->document_uploaded[1])){
-                                       $passport =  storage_path("app/public/".(explode("&&&&",$student?->document_uploaded[1]['filename'])[0]));
-                                   }
+                                               if(\App\Classes\Settings::checkForPassport(($student?->document_uploaded ?? []))){
+                                                   $mypassport = \App\Classes\Settings::checkForPassport(($student?->document_uploaded ?? []));
+                                                   $passport =  asset("storage/".(explode("&&&&",$mypassport['filename'])[0]));
+                                               }
                             @endphp
                             @if($passport !== NULL)
                                 <img src="{{ $passport }}" class="img-bordered" width="50" height="50"/>

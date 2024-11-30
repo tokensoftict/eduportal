@@ -54,8 +54,9 @@ new #[Layout('admin.app')] class extends Component {
                                         </div>
                                         @php
                                             $passport = NULL;
-                                               if(isset($student?->document_uploaded[1])){
-                                                   $passport =  asset("storage/".(explode("&&&&",$student?->document_uploaded[1]['filename'])[0]));
+                                               if(\App\Classes\Settings::checkForPassport(($student?->document_uploaded ?? []))){
+                                                   $mypassport = \App\Classes\Settings::checkForPassport(($student?->document_uploaded ?? []));
+                                                   $passport =  asset("storage/".(explode("&&&&",$mypassport['filename'])[0]));
                                                }
                                         @endphp
                                         @if($passport !== NULL)
