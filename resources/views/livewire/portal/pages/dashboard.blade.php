@@ -27,7 +27,7 @@ new #[Layout('admin.app')] class extends Component {
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">{{ $student->name }}</h3>
+                    <h3 class="card-title">{{ $student->name }} - {{ $student?->course?->name }}</h3>
                 </div>
                 <div class="card-body">
                     @if (session()->has('success'))
