@@ -51,6 +51,9 @@
         .text-center {
             text-align: center;
         }
+        @page {
+            footer: page-footer;
+        }
     </style>
 </head>
 <body>
@@ -366,5 +369,9 @@
         @endforeach
     </table>
 </div>
+
+<htmlpagefooter name="page-footer">
+    <table width="100%"><tr><td style="font-size: 18px; padding-bottom: 20px;" align="right">Powered by Zenith Academy</td></tr></table>
+</htmlpagefooter>
 </body>
 </html>

@@ -21,7 +21,6 @@ class DownloadController extends Controller
         $pdf = PDF::loadView("pdfs.payment",['payment' => $transaction]);
         $pdf->getMpdf()->SetWatermarkText(strtoupper("Paid"));
         $pdf->getMpdf()->showWatermarkText = true;
-
         return $pdf->stream('payment.pdf');
     }
 
@@ -39,7 +38,6 @@ class DownloadController extends Controller
         }];
 
         $pdf = PDF::loadView("pdfs.app_form",['student' => $student]);
-
 
         return $pdf->stream('payment.pdf');
     }
