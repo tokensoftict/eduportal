@@ -19,7 +19,7 @@
             </div>
         </div>
 
-
+        <!--
         <div class="single-slider slider-2 bg_cover" style="background-image: url({{ asset('img/banner2.jpg') }})" data-overlay="4">
             <div class="container">
                 <div class="row">
@@ -29,9 +29,10 @@
                             <a data-animation="fadeInUp" data-delay="1.3s" href="{{ route('student.register') }}" class="main-btn">Register Now</a>
                         </div>
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- single slider -->
+                </div>
+            </div>
+        </div>
+        -->
 
 
     </section>
