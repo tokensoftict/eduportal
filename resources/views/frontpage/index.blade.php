@@ -118,22 +118,32 @@
                                 </div>
                                 <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
                                     <div class="card-body">
-                                        <p>We provide conducive learning environment that is second to none.</p>
-                                        <p>Adekunle Ajasin University Akungba, provide you with seamless JUPEB programme</p>
-                                        <p>Adekunle Ajasin University Akungba, would provide you with experienced instructors for a
+                                        <p>1. We provide conducive learning environment that is second to none.</p>
+                                        <p>2. Adekunle Ajasin University Akungba, provide you with seamless JUPEB programme</p>
+                                        <p>3. Adekunle Ajasin University Akungba, would provide you with experienced instructors for a
                                             successful JUPEB programme.</p>
-                                        <p>We have sufficient learning aid</p>
+                                        <p>4. We have sufficient learning aid</p>
 
-                                        <p>We have well equipped laboratory.</p>
-                                        <p>We provide topnotch accommodation.</p>
-                                        <p>Our school fees is affordable.</p>
-                                        <p>Candidates can further their course in Law, Nursing, Medical laboratory Science, MBBS,
+                                        <p>5. We have well equipped laboratory.</p>
+                                        <p>6. We provide topnotch accommodation.</p>
+                                        <p>7. Our school fees is affordable.</p>
+                                        <p>8. Candidates can further their course in Law, Nursing, Medical laboratory Science, MBBS,
                                             Accounting, Economics etc, upon completion of the JUPEB programme, in Adekunle Ajasin
                                             University Akungba, or any other University, starting at 200 Level!</p>
-
-
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading-2">
+                                    <h5 class="mb-0">
+                                        <a role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="true" style="color:black" aria-controls="collapse-2">
+                                            ELIGIBILITY
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+                                    <div class="card-body">
                                         <div class="section-title mt-20">
-                                            <h5>Eligibility</h5>
                                             <p>
                                                 <b>i.All eligible candidates must not be less than 16 years at the commencement of the
                                                     2024/2025 academic session</b>
@@ -156,10 +166,24 @@
                                             </p>
 
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading-3">
+                                    <h5 class="mb-0">
+                                        <a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="true" style="color:black" aria-controls="collapse-3">
+                                            REGISTRATION PROCEDURES FOR THE JUPEB PROGRAMME
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-3">
+                                    <div class="card-body">
+
+
                                         <div class="section-title mt-20">
-                                            <h5>Registration Procedures for the JUPEB programme</h5>
                                             <p>
-                                                Prospective candidate should log on to,” https//:www. eduverifiedportal.com “
+                                                Prospective candidate should log on to, <a href="https//:www.eduverifiedportal.com">https//:www.eduverifiedportal.com</a>
                                                 Click register and supply a working email.
                                                 Fill the application form, make payment for application form.
                                                 Notification of admission would be received in the email provided, upon review of
@@ -192,14 +216,15 @@
                                             <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
                                                 what are you still waiting for?</p>
                                             <b> Addresses :</b> <br/>
-                                            Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.
-                                            Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
-                                            Kwara State.
+                                            <p>Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.</p>
+                                            <p>Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
+                                            Kwara State.</p>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
