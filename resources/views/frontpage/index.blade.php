@@ -61,6 +61,11 @@
             <div class="row">
                 <div class="col-lg-6 col-12 col-sm-6">
                     <div class="section-title mt-50">
+                        <h5>This webpage is owned by Zenith Academy, a consultant to Adekunle Ajasin University Akungba,
+                            Ondo State, on mobilization of candidates for JUPEB programme.</h5>
+                    </div>
+                    <!--
+                    <div class="section-title mt-50">
                         <h5>ADEKUNLE AJASIN UNIVERSITY, AKUNGBA, ONDO STATE.</h5>
                         <p>Joint Universities Preliminary Examinations Board ( JUPEB )</p>
                     </div>
@@ -68,12 +73,15 @@
                         <p>Zenith Academy, the Consultant to Adekunle Ajasin University, Akungba on mobilization of candidates for Jupeb- A- level programme, invite suitably qualified candidate for 2024/2025 academic session of Adekunle Ajasin University Jupeb programme.</p>
                         <p><strong>Venue:</strong> The lectures shall take place only on the University campus.</p>
                     </div>
-                    <div class="section-title mt-50">
+                          <div class="section-title mt-50">
                         <h5>OVERVIEW OF THE PROGRAMME</h5>
                     </div>
                     <div class="about-cont">
                         <p>Jupeb-A- level programme is an advanced level course, basically for a year duration. Candidates undergoing the course are assumed to be in 100 level in the university, upon completion of the programme, candidates shall sit for national examination, conducted by Jupeb examination body, with venue at Adekunle Ajasin university. The result of the examination, is what various candidates would use to obtain Direct Entry form ( DE )from Jamb, in order to process 200 level admission into university of their choice.</p>
                     </div>
+                    -->
+
+
 
                     <div class="section-title mt-50">
                         <h5>JUPEB OVERVIEW</h5>
