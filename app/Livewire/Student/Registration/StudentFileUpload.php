@@ -32,10 +32,12 @@ class StudentFileUpload extends StepComponent
         $this->userdocumentUploaded = $user->document_uploaded ?? [];
 
         foreach ($this->userdocumentUploaded as $key => $value) {
-            $filename = $this->userdocumentUploaded[$key]['filename'];
-            $filename = explode("&&&&", $filename);
-            $this->myDocumentUploaded[$key]['name'] = $filename[1];
-            $this->uploadedFiles[$filename[0]] =$filename;
+            if(isset($this->userdocumentUploaded[$key]['filename'])) {
+                $filename = $this->userdocumentUploaded[$key]['filename'];
+                $filename = explode("&&&&", $filename);
+                $this->myDocumentUploaded[$key]['name'] = $filename[1];
+                $this->uploadedFiles[$filename[0]] = $filename;
+            }
         }
 
     }
