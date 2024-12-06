@@ -194,15 +194,28 @@
                                                 <br/>
                                             </p>
                                             <h6 class="mt-3 mb-3">NOTE ON FEES PAYABLE</h6>
-                                            <p>
-                                                Application Form is N 10,000 ( Ten Thousand Naira Only )
-                                                Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )
-                                                Accommodation or Hostel Fee is N 30,000 ( Thirty Thousand Naira Only )
-                                                School Fees is N 220,000 ( Two Hundred and Twenty Thousand Naira Only )
-                                            </p>
+                                            <p>Application Form is N 10,000 ( Ten Thousand Naira Only )</p>
+                                            <p>Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )</p>
+                                            <p>Accommodation or Hostel Fee is N 30,000 ( Thirty Thousand Naira Only )</p>
+                                            <p>School Fees is N 220,000 ( Two Hundred and Twenty Thousand Naira Only )</p>
                                         </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="heading-4">
+                                    <h5 class="mb-0">
+                                        <a role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="true" style="color:black" aria-controls="collapse-4">
+                                            RESUMPTION PROCEDURE
+                                        </a>
+                                    </h5>
+                                </div>
+                                <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="heading-3">
+                                    <div class="card-body">
+
                                         <div class="section-title mt-20">
-                                            <h5>Resumption procedure</h5>
                                             <p>
                                                 Candidates are to provide evidence of payments at nearest Zenith Academy office, for
                                                 onward transfer to the University for commencement of lectures.
@@ -218,13 +231,12 @@
                                             <b> Addresses :</b> <br/>
                                             <p>Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.</p>
                                             <p>Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
-                                            Kwara State.</p>
+                                                Kwara State.</p>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
