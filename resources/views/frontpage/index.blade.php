@@ -84,15 +84,15 @@
                     <div class="section-title mt-50">
                         <h5>WHY CHOOSE ZENITH ACADEMY.</h5>
                         <p>At Zenith Academy, we provide a seamless registration platform for JUPEB programme of Adekunle
-                            Ajasin University Akungba, using EDUVERIFIED.
-                            We recommend candidate for immediate placement and commencement of lectures in the JUPEB
-                            section of the University.
-                            We provide conducive accommodation to ease stress of searching for a shelter.
-                            Free tutorial classes by our team of experienced instructors make the difference.
-                            Our guidance to candidate on choosing course of study and University is second to none.
-                            Our partnership with the University gave room for flexibility in school fees payment by candidates.
-                            We provide free accommodation for the first 50 candidates that pay all fees at once.
-                            Candidate can resume for lectures, with payment of just application form and admission acceptance,
+                            Ajasin University Akungba, using EDUVERIFIED.</p>
+                        <p>We recommend candidate for immediate placement and commencement of lectures in the JUPEB
+                            section of the University.</p>
+                        <p>We provide conducive accommodation to ease stress of searching for a shelter.</p>
+                        <p>Free tutorial classes by our team of experienced instructors make the difference.</p>
+                        <p>Our guidance to candidate on choosing course of study and University is second to none.</p>
+                        <p>Our partnership with the University gave room for flexibility in school fees payment by candidates.</p>
+                        <p>We provide free accommodation for the first 50 candidates that pay all fees at once.</p>
+                        <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
                             what are you still waiting for?</p>
                     </div>
 
