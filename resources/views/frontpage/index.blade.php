@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-lg-6 col-12 col-sm-6">
                     <div class="section-title mt-50">
-                        <h5>This webpage is owned by Zenith Academy, a consultant to Adekunle Ajasin University Akungba,
+                        <h5>This portal is owned by Zenith Academy, a consultant to Adekunle Ajasin University Akungba,
                             Ondo State, on mobilization of candidates for JUPEB programme.</h5>
                     </div>
                     <!--
