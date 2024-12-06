@@ -81,7 +81,20 @@
                     </div>
                     -->
 
-
+                    <div class="section-title mt-50">
+                        <h5>WHY CHOOSE ZENITH ACADEMY.</h5>
+                        <p>At Zenith Academy, we provide a seamless registration platform for JUPEB programme of Adekunle
+                            Ajasin University Akungba, using EDUVERIFIED.
+                            We recommend candidate for immediate placement and commencement of lectures in the JUPEB
+                            section of the University.
+                            We provide conducive accommodation to ease stress of searching for a shelter.
+                            Free tutorial classes by our team of experienced instructors make the difference.
+                            Our guidance to candidate on choosing course of study and University is second to none.
+                            Our partnership with the University gave room for flexibility in school fees payment by candidates.
+                            We provide free accommodation for the first 50 candidates that pay all fees at once.
+                            Candidate can resume for lectures, with payment of just application form and admission acceptance,
+                            what are you still waiting for?</p>
+                    </div>
 
                     <div class="section-title mt-50">
                         <h5>JUPEB OVERVIEW</h5>
@@ -98,7 +111,7 @@
                             <div class="card">
                                 <div class="card-header" id="heading-1">
                                     <h5 class="mb-0">
-                                        <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                        <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" style="color:black" aria-controls="collapse-1">
                                             WHY CHOOSE ADEKUNLE AJASIN UNIVERSITY AKUNGBA, FOR YOUR JUPEB PROGRAMME
                                         </a>
                                     </h5>
@@ -117,6 +130,73 @@
                                         <p>Candidates can further their course in Law, Nursing, Medical laboratory Science, MBBS,
                                             Accounting, Economics etc, upon completion of the JUPEB programme, in Adekunle Ajasin
                                             University Akungba, or any other University, starting at 200 Level!</p>
+
+
+                                        <div class="section-title mt-20">
+                                            <h5>Eligibility</h5>
+                                            <p>
+                                                <b>i.All eligible candidates must not be less than 16 years at the commencement of the
+                                                    2024/2025 academic session</b>
+                                            </p>
+                                            <p>
+                                                ii. Candidates are advised to correctly upload all their O’Level results on the portal. A
+                                                maximum of two (2) sittings is allowed in the case of O’Level requirements.
+                                            </p>
+                                            <p>
+                                                iii. AAUA accepts WAEC, NECO and NABTEB O’Level results.
+                                            </p>
+                                            <p>
+                                                iv. Candidates are advised to read the O’Level requirements of their courses and select
+                                                the right subject combinations, which must include Credit passes in English
+                                                Language and Mathematics.
+                                            </p>
+                                            <p>
+                                                v. Candidates with deficiency in O’level can still apply, such candidate admission will be
+                                                scrutinized and necessary recommendations provided.
+                                            </p>
+
+                                        </div>
+                                        <div class="section-title mt-20">
+                                            <h5>Registration Procedures for the JUPEB programme</h5>
+                                            <p>
+                                                Prospective candidate should log on to,” https//:www. eduverifiedportal.com “
+                                                Click register and supply a working email.
+                                                Fill the application form, make payment for application form.
+                                                Notification of admission would be received in the email provided, upon review of
+                                                documents submitted.
+                                                Candidates considered for admission into the JUPEB programme, should proceed with
+                                                payment of admission acceptance, and school fees on their portal.
+                                                For any hitches, contact <a href="mailto:info@eduverifiedportal.com">info@eduverifiedportal.com</a> , for instant response.
+                                                <br/>
+                                            </p>
+                                            <h6 class="mt-3 mb-3">NOTE ON FEES PAYABLE</h6>
+                                            <p>
+                                                Application Form is N 10,000 ( Ten Thousand Naira Only )
+                                                Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )
+                                                Accommodation or Hostel Fee is N 30,000 ( Thirty Thousand Naira Only )
+                                                School Fees is N 220,000 ( Two Hundred and Twenty Thousand Naira Only )
+                                            </p>
+                                        </div>
+                                        <div class="section-title mt-20">
+                                            <h5>Resumption procedure</h5>
+                                            <p>
+                                                Candidates are to provide evidence of payments at nearest Zenith Academy office, for
+                                                onward transfer to the University for commencement of lectures.
+                                            </p>
+                                            <p>
+                                                Candidates at far distance could reach us on phone for onward transfer to our
+                                                representative in the University, on 08034983798.
+                                            </p>
+                                        </div>
+                                        <div class="section-title mt-20">
+                                            <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
+                                                what are you still waiting for?</p>
+                                            <b> Addresses :</b> <br/>
+                                            Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.
+                                            Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
+                                            Kwara State.
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -124,72 +204,6 @@
 
                     </div>
 
-                    <div class="section-title mt-20">
-                        <h5>Eligibility</h5>
-                        <p>
-                            <b>i.All eligible candidates must not be less than 16 years at the commencement of the
-                                2024/2025 academic session</b>
-                        </p>
-                        <p>
-                            ii. Candidates are advised to correctly upload all their O’Level results on the portal. A
-                            maximum of two (2) sittings is allowed in the case of O’Level requirements.
-                        </p>
-                        <p>
-                            iii. AAUA accepts WAEC, NECO and NABTEB O’Level results.
-                        </p>
-                        <p>
-                            iv. Candidates are advised to read the O’Level requirements of their courses and select
-                            the right subject combinations, which must include Credit passes in English
-                            Language and Mathematics.
-                        </p>
-                        <p>
-                            v. Candidates with deficiency in O’level can still apply, such candidate admission will be
-                            scrutinized and necessary recommendations provided.
-                        </p>
-
-                    </div>
-                    <div class="section-title mt-20">
-                        <h5>Registration Procedures for the JUPEB programme</h5>
-                        <p>
-                            Prospective candidate should log on to,” https//:www. eduverifiedportal.com “
-                            Click register and supply a working email.
-                            Fill the application form, make payment for application form.
-                            Notification of admission would be received in the email provided, upon review of
-                            documents submitted.
-                            Candidates considered for admission into the JUPEB programme, should proceed with
-                            payment of admission acceptance, and school fees on their portal.
-                            For any hitches, contact <a href="mailto:info@eduverifiedportal.com">info@eduverifiedportal.com</a> , for instant response.
-                            <br/>
-                        </p>
-                        <h6 class="mt-3 mb-3">NOTE ON FEES PAYABLE</h6>
-                        <p>
-                            Application Form is N 10,000 ( Ten Thousand Naira Only )
-                            Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )
-                            Accommodation or Hostel Fee is N 30,000 ( Thirty Thousand Naira Only )
-                            School Fees is N 220,000 ( Two Hundred and Twenty Thousand Naira Only )
-                        </p>
-                    </div>
-
-                    <div class="section-title mt-20">
-                        <h5>Resumption procedure</h5>
-                        <p>
-                            Candidates are to provide evidence of payments at nearest Zenith Academy office, for
-                            onward transfer to the University for commencement of lectures.
-                        </p>
-                        <p>
-                            Candidates at far distance could reach us on phone for onward transfer to our
-                            representative in the University, on 08034983798.
-                        </p>
-                    </div>
-
-                    <div class="section-title mt-20">
-                        <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
-                            what are you still waiting for?</p>
-                        <b> Addresses :</b> <br/>
-                        Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.
-                        Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
-                        Kwara State.
-                    </div>
                 </div>
 
 
