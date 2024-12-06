@@ -43,7 +43,7 @@ class Signup extends Component
             auth('student')->login($student);
             event(new Registered($student));
 
-            session()->flash('success', "Register Successfully, Please check your email to activate your account");
+            session()->flash('success', "Registered Successfully, Please check your email to activate your account");
         });
 
     }
