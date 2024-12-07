@@ -27,7 +27,7 @@ class StudentFileUpload extends StepComponent
 
     public function mount()
     {
-        $this->documentUploads = DocumentUpload::query()->pluck('name', 'id')->toArray();
+        $this->documentUploads = DocumentUpload::query()->whereNotNull('created_at')->pluck('name', 'id')->toArray();
         $user = auth('student')->user();
         $this->userdocumentUploaded = $user->document_uploaded ?? [];
 
