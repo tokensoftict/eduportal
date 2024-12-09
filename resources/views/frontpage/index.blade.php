@@ -183,7 +183,7 @@
 
                                         <div class="section-title mt-20">
                                             <p>
-                                                Prospective candidate should log on to, <a href="https//:www.eduverifiedportal.com">https//:www.eduverifiedportal.com</a>
+                                                Prospective candidate should log on to, <a href="https://www.eduverifiedportal.com">https://www.eduverifiedportal.com</a>
                                                 Click register and supply a working email.
                                                 Fill the application form, make payment for application form.
                                                 Notification of admission would be received in the email provided, upon review of
