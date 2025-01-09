@@ -5,20 +5,18 @@ namespace App\Livewire\Student\Registration;
 
 use App\Models\DocumentUpload;
 use Livewire\Attributes\On;
+use Livewire\WithFileUploads;
 use Spatie\LivewireFilepond\WithFilePond;
 use Spatie\LivewireWizard\Components\StepComponent;
 
 class StudentFileUpload extends StepComponent
 {
-    use WithFilePond;
+    use WithFileUploads;
 
     public $file;
-    public array $uploadedFiles = [];
-    public array $cacheFiles = [];
     public array $documentUploads = [];
-
-    public array $userdocumentUploaded = [];
-    public array $myDocumentUploaded = [];
+    public array $myDocument = [];
+    public string $type = "";
 
     public function render()
     {
@@ -27,57 +25,67 @@ class StudentFileUpload extends StepComponent
 
     public function mount()
     {
-        $this->documentUploads = DocumentUpload::query()->whereNotNull('created_at')->pluck('name', 'id')->toArray();
         $user = auth('student')->user();
-        $this->userdocumentUploaded = $user->document_uploaded ?? [];
 
-        foreach ($this->userdocumentUploaded as $key => $value) {
-            if(isset($this->userdocumentUploaded[$key]['filename'])) {
-                $filename = $this->userdocumentUploaded[$key]['filename'];
-                $filename = explode("&&&&", $filename);
-                $this->myDocumentUploaded[$key]['name'] = $filename[1];
-                $this->uploadedFiles[$filename[0]] = $filename;
-            }
+        $this->documentUploads = DocumentUpload::query()->whereNotNull('created_at')->pluck('name', 'id')->toArray();
+        $this->myDocument = $user->document_uploaded ?? [];
+    }
+
+
+    public function uploadFile()
+    {
+        $this->validate([
+            'type' => 'required',
+            'file' => 'required'
+        ]);
+
+        $name =  $this->file->store('documents', 'public');
+
+
+        //save it inside database
+
+        $user = auth('student')->user();
+        $existingDocument = $user->document_uploaded;
+        if ($existingDocument == "[]" || is_null($existingDocument)) {
+            $existingDocument = [];
         }
 
-    }
+        $count = count($existingDocument);
+        $count++;
+        $existingDocument[$count] = [
+            'type' => $this->type,
+            'filename' => $name."&&&&".$this->file->getClientOriginalName(),
+        ];
 
-
-    public function deleteFile($file,$key)
-    {
-        @unlink(storage_path('app/public/'.$file));
-        unset($this->userdocumentUploaded[$key]);
-        unset($this->uploadedFiles[$file]);
-
-        $user = auth('student')->user();
-        $user->document_uploaded = $this->userdocumentUploaded;
+        $user->document_uploaded = $existingDocument;
         $user->save();
 
+        $this->file = NULL;
+        $this->type = "";
+
+        $this->myDocument = $user->document_uploaded;
     }
 
-    #[On('filepond-upload-finished')]
-    public function uploadFinished($file): void
+    public function deleteFile($key)
     {
-        $name = $this->file->store('documents', 'public');
-        $this->uploadedFiles[$name] = $this->file->getClientOriginalName();
-        $this->cacheFiles[$file] = $name;
+        $user = auth('student')->user();
+        if(isset($user->document_uploaded[$key])) {
+            $document = $user->document_uploaded[$key];
+            $file = explode("&&&&", $document['filename']);
+            @unlink(storage_path('app/public/'.$file[0]));
 
+            $upDoc = $user->document_uploaded;
+            unset($upDoc[$key]);
+            $user->document_uploaded = $upDoc;
+        }
+        $user->save();
 
+        $this->myDocument = $user->document_uploaded ?? [];
     }
 
-    #[On('filepond-upload-reverted')]
-    public function uploadRemove($file): void
+    public function store()
     {
-        unset($this->uploadedFiles[$this->cacheFiles[$file]]);
-        @unlink(storage_path('app/public/'.$this->cacheFiles[$file]));
-    }
-
-    #[On('filepond-upload-file-removed')]
-    public function uploadRemoved($file): void
-    {
-        unset($this->uploadedFiles[$this->cacheFiles[$file]]);
-        unset($this->cacheFiles[$file]);
-        @unlink(storage_path('app/public/'.$this->cacheFiles[$file]));
+        $this->nextStep();
     }
 
     public function back()
@@ -85,15 +93,4 @@ class StudentFileUpload extends StepComponent
         $this->previousStep();
     }
 
-    public function store()
-    {
-        $user = auth('student')->user();
-
-        if(count($this->userdocumentUploaded) > 0) {
-            $user->document_uploaded = $this->userdocumentUploaded;
-            $user->save();
-        }
-
-        $this->nextStep();
-    }
 }

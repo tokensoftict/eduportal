@@ -1,90 +1,94 @@
 <div id="category-2-part" style="margin-bottom: 30px; height: auto; min-height: 70vh">
     <div class="container">
         <div class="card">
-            <form wire:submit.prevent="store">
+            <div class="card-body">
+                <h5 class="card-title">Student Document Upload</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Please complete the required information below</h6>
                 <div class="card-body">
-                    <h5 class="card-title">Student Document Upload</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Please complete the required information below</h6>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6 col-12 col-lg-6">
-                                <x-filepond::upload wire:model="file" max-files="5" multiple="true" />
-                            </div>
-                            <div class="col-sm-6 col-12 col-lg-6">
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th class="text-center">Document Type</th>
-                                        <th class="text-center">Document Uploaded</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    @php
-                                        $loopDocumentUploads = $documentUploads;
-                                    @endphp
-                                    @foreach($documentUploads as $keys =>$documentUpload)
+                    <div class="row mt-3">
+                        <div class="col-sm-4 col-12">
+                            <h5>Upload Document Type</h5>
+                            <form wire:submit.prevent="uploadFile()">
+                                <div class="form-group form-group-sm mt-4">
+                                    <label>Document Type</label>
+                                    <select wire:model="type" class="form-control form-control-sm">
+                                        <option>Select Document Type</option>
+                                        @foreach($documentUploads as $key => $documentUpload)
+                                            <option value="{{ $key }}">{{ $documentUpload }}</option>
+                                        @endforeach
+                                    </select>
+                                    @if ($errors->has('type'))
+                                        <span class="text-danger">{{ $errors->first('type') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group form-group-sm mt-2">
+                                    <label>File</label>
+                                    <input type="file" wire:model="file" class="form-control form-control-sm">
+                                    @if ($errors->has('file'))
+                                        <span class="text-danger">{{ $errors->first('file') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mt-4">
+                                    <button class="btn btn-primary btn-sm" type="submit" wire:loading.attr="disabled">
+                                        <span wire:loading wire:target="uploadedFiles" class="fa fa-spin fa-spinner" role="status"></span>
+                                        Upload Document
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-1 col-12 mt-sm-0 mt-4"></div>
+                        <div class="col-sm-7 col-12">
+                            <h5>Document Uploaded</h5>
+                            <br/>
+                            <table class="table table-striped table-sm table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Document Type</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($myDocument as $key => $document)
+                                        @php
+                                            $originalFilename = explode("&&&&", $document['filename']);
+                                            $documentType =  \App\Models\DocumentUpload::find($document['type']);
+                                        @endphp
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $originalFilename[1] }}</td>
+                                            <td>{{ $documentType->name }}</td>
                                             <td>
-                                                <select class="form-control" wire:model="userdocumentUploaded.{{ $keys }}.type" onchange="triggerChange('userdocumentUploaded.{{ $keys }}.type', this, false)">
-                                                    <option>Select Document Type</option>
-                                                    @foreach($loopDocumentUploads as $key => $documentUpload)
-                                                        <option value="{{ $key }}">{{ $documentUpload }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select class="form-control" wire:model="userdocumentUploaded.{{ $keys }}.filename" onchange="triggerChange('userdocumentUploaded.{{ $keys }}.filename', this, false)">
-                                                    <option>Select Uploaded Document</option>
-                                                    @foreach($uploadedFiles as $key =>$file)
-                                                        @if(is_array($file))
-                                                            <option value="{{ $key }}&&&&{{ $file[1] }}">{{ $file[1] }}</option>
-                                                        @else
-                                                            <option value="{{ $key }}&&&&{{ $file }}">{{ $file }}</option>
-                                                        @endif
-                                                    @endforeach
-                                                </select>
-                                            </td>
-                                            <td>
-                                                @if(isset($this->userdocumentUploaded[$keys]['filename']))
-                                                    @php
-                                                        $filename = $this->userdocumentUploaded[$keys]['filename'];
-                                                        $filename = explode("&&&&", $filename);
-                                                    @endphp
-                                                    <button type="button" href="#" wire:click="deleteFile('{{ $filename[0] }}',{{ $keys }})" wire:loading.attr="disabled" class="btn btn-danger">
-                                                        <span wire:loading wire:target="deleteFile('{{ $filename[0] }}', {{ $keys }})" class="fa fa-spin fa-spinner" role="status"></span>
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                @endif
+                                                <a href="{{ asset("storage/".$originalFilename[0]) }}" target="_blank" class="btn btn-sm btn-primary">View</a>
+                                                &nbsp; &nbsp; &nbsp;
+                                                <button wire:click="deleteFile('{{ $key }}')" class="btn btn-sm btn-danger">Delete</button>
                                             </td>
                                         </tr>
                                     @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
+                </div>
 
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                        <div class="col-6 text-left">
-                            <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
-                                <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
-                                Back
-                            </button>
-                        </div>
-                        <div class="col-6 text-right">
-                            <button type="submit"  class="btn btn-success btn-lg" wire:loading.attr="disabled">
-                                <span wire:loading wire:target="store" class="fa fa-spin fa-spinner" role="status"></span>
-                                Save Changes and Continue
-                            </button>
-                        </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-6 text-left">
+                        <button type="button" wire:click="back" class="btn btn-danger btn-lg" wire:loading.attr="disabled">
+                            <span wire:loading wire:target="back" class="fa fa-spin fa-spinner" role="status"></span>
+                            Back
+                        </button>
+                    </div>
+                    <div class="col-6 text-right">
+                        <button type="button" wire:click="store"  class="btn btn-success btn-lg" wire:loading.attr="disabled">
+                            <span wire:loading wire:target="store" class="fa fa-spin fa-spinner" role="status"></span>
+                            Save Changes and Continue
+                        </button>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
