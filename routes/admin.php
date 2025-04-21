@@ -5,7 +5,7 @@ use Livewire\Volt\Volt;
 
 Route::prefix('admin')->group(function() {
 
-    Route::get('/', ['as' => 'admin.index', 'uses' => 'App\Livewire\Admin\Auth\LoginComponent']);
+    Route::get('/', ['as' => 'admin.index', 'uses' => 'App\Livewire\Admin\Auth\LoginComponent'])->name('login');
 
     Route::get('/login', ['as' => 'admin.login', 'uses' => 'App\Livewire\Admin\Auth\LoginComponent']);
     Route::post('/loginprocess', ['as' => 'admin.loginprocess', 'uses' => 'App\Http\Controllers\Admin\Auth\LoginController@loginprocess']);
@@ -21,6 +21,12 @@ Route::prefix('admin')->group(function() {
         Volt::route('/settings/religion/new', 'admin.pages.settings.religion.new')->name('religions.create');
         Volt::route('/settings/religion/{id}/edit', 'admin.pages.settings.religion.new')->name('religions.edit');
         Volt::route('/settings/religion/{id}/delete', 'admin.pages.settings.religion.destroy')->name('religions.destroy');
+
+
+        Volt::route('/settings/campus', 'admin.pages.settings.campus.list')->name('campus.index');
+        Volt::route('/settings/campus/new', 'admin.pages.settings.campus.new')->name('campus.create');
+        Volt::route('/settings/campus/{id}/edit', 'admin.pages.settings.campus.new')->name('campus.edit');
+        Volt::route('/settings/campus/{id}/delete', 'admin.pages.settings.campus.destroy')->name('campus.destroy');
 
 
         Volt::route('/settings/gender', 'admin.pages.settings.gender.list')->name('genders.index');

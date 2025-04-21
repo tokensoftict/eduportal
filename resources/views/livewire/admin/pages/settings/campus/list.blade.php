@@ -11,7 +11,7 @@ new #[Layout('admin.app')] class extends Component {
 }
 ?>
 @section('content_header')
-    <h1>Religion List</h1>
+    <h1>Campus List</h1>
 @stop
 
 @section('plugins.Sweetalert2', true)
@@ -66,7 +66,7 @@ new #[Layout('admin.app')] class extends Component {
         <div class="col-sm-12">
             <div class="card card-secondary">
                 <div class="card-header">
-                    <h3 class="card-title">Religion List</h3>
+                    <h3 class="card-title">Fees List</h3>
                 </div>
                 @if (session()->has('success'))
                     <div  class="alert alert-success">
@@ -88,7 +88,9 @@ new #[Layout('admin.app')] class extends Component {
                         <thead>
                         <tr>
                             <td>#</td>
-                            <td>Name</td>
+                            <td>Campus Name</td>
+                            <td>School Fees</td>
+                            <td>No of Installment</td>
                             <td>Created</td>
                             <td>Last Modified</td>
                             <td>Actions</td>
@@ -96,21 +98,17 @@ new #[Layout('admin.app')] class extends Component {
                         </thead>
                         <tbody>
                         @php($count=0)
-                        @foreach(\App\Models\Religion::all() as $religion)
+                        @foreach(\App\Models\Campus::all() as $fee)
                             <tr>
                                 <td>{{++$count}}</td>
-                                <td>{{$religion->name}}</td>
-                                <td>{{$religion?->created_at?->toDayDateTimeString()}}</td>
-                                <td>{{$religion?->updated_at?->toDayDateTimeString()}}</td>
+                                <td>{{$fee->name}}</td>
+                                <td>{{number_format($fee->fees)}}</td>
+                                <td>{{$fee->noOfInstalments}}</td>
+                                <td>{{$fee?->created_at?->toDayDateTimeString()}}</td>
+                                <td>{{$fee?->updated_at?->toDayDateTimeString()}}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="{{ route('religions.edit',$religion->id)}}" class="btn btn-primary">Edit</a>
-                                        <form action="{{ route('religions.destroy', $religion->id)}}" method="post">&nbsp;&nbsp;&nbsp;
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger delete-confirm" type="submit">Delete</button>
-                                        </form>
-
+                                        <a href="{{ route('campus.edit',$fee->id)}}" class="btn btn-primary">Edit</a>
                                     </div>
                                 </td>
                             </tr>
@@ -119,7 +117,9 @@ new #[Layout('admin.app')] class extends Component {
                         <tfoot>
                         <tr>
                             <td>#</td>
-                            <td>Name</td>
+                            <td>Campus Name</td>
+                            <td>School Fees</td>
+                            <td>No of Installment</td>
                             <td>Created</td>
                             <td>Last Modified</td>
                             <td>Actions</td>

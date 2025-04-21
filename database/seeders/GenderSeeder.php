@@ -15,13 +15,19 @@ class GenderSeeder extends Seeder
     {
         DB::table('genders')->insert([
             [
-                'name' => 'Male'
+                'name' => 'Male',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'name' => 'Female'
+                'name' => 'Female',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'name' => 'Others'
+                'name' => 'Others',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }

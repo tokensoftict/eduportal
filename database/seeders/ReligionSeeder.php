@@ -15,13 +15,19 @@ class ReligionSeeder extends Seeder
     {
         DB::table('religions')->insert([
             [
-                'name' => 'Muslim'
+                'name' => 'Muslim',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'name' => 'Christian'
+                'name' => 'Christian',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-                'name' => 'Others'
+                'name' => 'Others',
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }

@@ -100,8 +100,8 @@ new #[Layout('admin.app')] class extends Component {
                             <tr>
                                 <td>{{++$count}}</td>
                                 <td>{{$gender->name}}</td>
-                                <td>{{$gender->created_at->toDayDateTimeString()}}</td>
-                                <td>{{$gender->updated_at->toDayDateTimeString()}}</td>
+                                <td>{{$gender?->created_at?->toDayDateTimeString()}}</td>
+                                <td>{{$gender?->updated_at?->toDayDateTimeString()}}</td>
                                 <td>
                                     <div class="btn-group">
                                         <a href="{{ route('genders.edit',$gender->id)}}" class="btn btn-primary">Edit</a>

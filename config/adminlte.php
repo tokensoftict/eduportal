@@ -344,6 +344,23 @@ return [
             ],
         ],
         [
+            'text'    => 'Campus',
+            'icon'    => 'fas fa-fw fa-peace',
+            'can'  => 'admin',
+            'submenu' => [
+                [
+                    'text' => 'Add New',
+                    'route'  => 'campus.create',
+                    'can'  => 'admin',
+                ],
+                [
+                    'text'=>'List All',
+                    'route'=>'campus.index',
+                    'can'  => 'admin',
+                ],
+            ],
+        ],
+        [
             'text'    => 'Genders',
             'icon'    => 'fas fa-fw fa-user',
             'can'  => 'admin',

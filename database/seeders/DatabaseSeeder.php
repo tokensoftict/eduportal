@@ -22,7 +22,8 @@ class DatabaseSeeder extends Seeder
             GenderSeeder::class,
             SchoolfessSeeder::class,
             CourseSeeder::class,
-            AlevelSubjectSeeder::class
+            AlevelSubjectSeeder::class,
+            CampusSeeder::class
         ]);
     }
 }
