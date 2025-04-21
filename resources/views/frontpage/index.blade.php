@@ -25,12 +25,13 @@
         }
     </style>
     <section id="slider-part" class="slider-active">
-        <div class="single-slider slider-2 bg_cover" style="background-image: url({{ asset('img/newbanner.jpg') }})" data-overlay="4">
+        <div class="single-slider slider-2 bg_cover" style="background-image: url({{ asset('img/explore_apu.jpg') }})" data-overlay="4">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="slider-cont">
-                            <h1 style="font-size: 39px;line-height: 50px;" data-animation="bounceInLeft" data-delay="1s">Welcome to Eduverified Portal,<br/> for Jupeb Programme Mobilization of Adekunle Ajasin University Akungba, Ondo State.</h1>
+                            <h1 style="font-size: 39px;line-height: 50px;" data-animation="bounceInLeft" data-delay="1s" >Welcome to official web page for IJMB Programme,<br/> of Ahman Pategi University, Patigi, Kwara
+                            State.</h1>
                             <a data-animation="fadeInUp" data-delay="1.3s" href="{{ route('student.register') }}" class="main-btn">Register Now</a>
                         </div>
                     </div>
@@ -61,8 +62,8 @@
             <div class="row">
                 <div class="col-lg-6 col-12 col-sm-6">
                     <div class="section-title mt-50">
-                        <h5>This portal is owned by Zenith Academy, a consultant to Adekunle Ajasin University Akungba,
-                            Ondo State, on mobilization of candidates for JUPEB programme.</h5>
+                        <h5>Welcome to official web page for IJMB Programme of Ahman Pategi University, Patigi, Kwara
+                            State.</h5>
                     </div>
                     <!--
                     <div class="section-title mt-50">
@@ -79,7 +80,7 @@
                     <div class="about-cont">
                         <p>Jupeb-A- level programme is an advanced level course, basically for a year duration. Candidates undergoing the course are assumed to be in 100 level in the university, upon completion of the programme, candidates shall sit for national examination, conducted by Jupeb examination body, with venue at Adekunle Ajasin university. The result of the examination, is what various candidates would use to obtain Direct Entry form ( DE )from Jamb, in order to process 200 level admission into university of their choice.</p>
                     </div>
-                    -->
+
 
                     <div class="section-title mt-50">
                         <h5>WHY CHOOSE ZENITH ACADEMY.</h5>
@@ -95,14 +96,14 @@
                         <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
                             what are you still waiting for?</p>
                     </div>
-
+                    -->
                     <div class="section-title mt-50">
-                        <h5>JUPEB OVERVIEW</h5>
+                        <h5>INTERIM JOINT MATRICULATION BOARD ( IJMB )</h5>
                         <p>
-                            Jupeb-A- level programme is an advanced level course, basically for a year duration. Candidates
+                            IJMB-A- level programme is an advanced level course, basically for a year duration. Candidates
                             undergoing the course are assumed to be in 100 level in the university, upon completion of the
-                            programme, candidates shall sit for national examination, conducted by Jupeb examination
-                            body, with venue at Adekunle Ajasin university. The result of the examination, is what various
+                            programme, candidates shall sit for national examination, conducted by IJMB examination body,
+                            with venue at Ahman Pategi University. The result of the examination, is what various
                             candidates would use to obtain Direct Entry form ( DE ) from Jamb, in order to process 200 level
                             admission into university of their choice.
                         </p>
@@ -118,18 +119,17 @@
                                 </div>
                                 <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
                                     <div class="card-body">
-                                        <p>1. We provide conducive learning environment that is second to none.</p>
-                                        <p>2. Adekunle Ajasin University Akungba, provide you with seamless JUPEB programme</p>
-                                        <p>3. Adekunle Ajasin University Akungba, would provide you with experienced instructors for a
-                                            successful JUPEB programme.</p>
-                                        <p>4. We have sufficient learning aid</p>
-
-                                        <p>5. We have well equipped laboratory.</p>
-                                        <p>6. We provide topnotch accommodation.</p>
-                                        <p>7. Our school fees is affordable.</p>
-                                        <p>8. Candidates can further their course in Law, Nursing, Medical laboratory Science, MBBS,
-                                            Accounting, Economics etc, upon completion of the JUPEB programme, in Adekunle Ajasin
-                                            University Akungba, or any other University, starting at 200 Level!</p>
+                                        <p>1.We provide conducive learning environment that is second to none.</p>
+                                        <p>2. Ahman Pategi University, provide you with seamless IJMB programme</p>
+                                        <p>3. Ahman Pategi University, would provide you with experienced instructors for a successful IJMB
+                                        programme.</p>
+                                        <p>4.We have sufficient learning aid</p>
+                                        <p>5.We have well equipped laboratory.</p>
+                                        <p>6.We provide topnotch accommodation.</p>
+                                        <p>7.Our school fees is affordable.</p>
+                                        <p>8.Candidates can further their course in Law, Nursing, Medical laboratory Science, MBBS,</p>
+                                        <p>9.Accounting, Economics etc, upon completion of the IJMB programme, in Ahman Pategi
+                                        University, or any other University, starting at 200 Level!</p>
                                     </div>
                                 </div>
                             </div>
@@ -145,20 +145,19 @@
                                     <div class="card-body">
                                         <div class="section-title mt-20">
                                             <p>
-                                                <b>i.All eligible candidates must not be less than 16 years at the commencement of the
-                                                    2024/2025 academic session</b>
+                                                <b>i.All eligible candidates must not be less than 15 years at the commencement of the
+                                                    2025/2026 academic session</b>
                                             </p>
                                             <p>
                                                 ii. Candidates are advised to correctly upload all their O’Level results on the portal. A
-                                                maximum of two (2) sittings is allowed in the case of O’Level requirements.
+                                                maximum of <b>two (2) sittings is allowed in the case of O’Level requirements.</b>
                                             </p>
                                             <p>
-                                                iii. AAUA accepts WAEC, NECO and NABTEB O’Level results.
+                                                iii. Ahman Pategi University accepts <b>WAEC</b>, <b>NECO</b> and <b>NABTEB O’Level results.</b>
                                             </p>
                                             <p>
-                                                iv. Candidates are advised to read the O’Level requirements of their courses and select
-                                                the right subject combinations, which must include Credit passes in English
-                                                Language and Mathematics.
+                                                iv. Candidates with deficiency in O’level can still apply, such candidate admission will be
+                                                scrutinized and necessary recommendations provided.
                                             </p>
                                             <p>
                                                 v. Candidates with deficiency in O’level can still apply, such candidate admission will be
@@ -183,21 +182,22 @@
 
                                         <div class="section-title mt-20">
                                             <p>
-                                                Prospective candidate should log on to, <a href="https://www.eduverifiedportal.com">https://www.eduverifiedportal.com</a>
+                                                Prospective candidate should log on to,” <a href="https://www.eduverifiedportal.com/">https://www.eduverifiedportal.com/</a> “
                                                 Click register and supply a working email.
                                                 Fill the application form, make payment for application form.
                                                 Notification of admission would be received in the email provided, upon review of
                                                 documents submitted.
-                                                Candidates considered for admission into the JUPEB programme, should proceed with
+                                                Candidates considered for admission into the IJMB programme, should proceed with
                                                 payment of admission acceptance, and school fees on their portal.
+                                                Regular registration would closes on 30 th of June, 2025
+                                                Late registration would attract extra fees, commencing on 1 st of July, 2025
                                                 For any hitches, contact <a href="mailto:info@eduverifiedportal.com">info@eduverifiedportal.com</a> , for instant response.
                                                 <br/>
                                             </p>
                                             <h6 class="mt-3 mb-3">NOTE ON FEES PAYABLE</h6>
                                             <p>Application Form is N 10,000 ( Ten Thousand Naira Only )</p>
                                             <p>Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )</p>
-                                            <p>Accommodation or Hostel Fee is N 30,000 ( Thirty Thousand Naira Only )</p>
-                                            <p>School Fees is N 220,000 ( Two Hundred and Twenty Thousand Naira Only )</p>
+                                            <p>School Fees is N 150,000 ( One hundred and Fifty Thousand Naira Only )</p>
                                         </div>
 
 
@@ -217,21 +217,20 @@
 
                                         <div class="section-title mt-20">
                                             <p>
-                                                Candidates are to provide evidence of payments at nearest Zenith Academy office, for
-                                                onward transfer to the University for commencement of lectures.
+                                                Candidates are to provide evidence of payments at the University mini campus, Ahman Pategi
+                                                University, flower Garden, GRA, Ilorin, for commencement of lectures.
                                             </p>
                                             <p>
-                                                Candidates at far distance could reach us on phone for onward transfer to our
-                                                representative in the University, on 08034983798.
+                                                Candidates at far distance could reach us on phone for further enquiries on resumption,
+                                                via 08034983798.
                                             </p>
                                         </div>
                                         <div class="section-title mt-20">
                                             <p>Candidate can resume for lectures, with payment of just application form and admission acceptance,
                                                 what are you still waiting for?</p>
                                             <b> Addresses :</b> <br/>
-                                            <p>Zenith Academy, No 2 Akin-Osinyemi Street, off Allen avenue, Ikeja, Lagos.</p>
-                                            <p>Zenith Academy, Kwara State Library Complex, No 1, Zulu Gambari Road, Ilorin,
-                                                Kwara State.</p>
+                                            <p>Ilorin Address, Ahman Pategi University, flower Garden, GRA, Ilorin.</p>
+                                            <p>Pategi address, Km 3 Patigi-Kpada road, Patigi, Kwara State.</p>
                                         </div>
 
                                     </div>
