@@ -84,7 +84,9 @@
                             <a class="navbar-brand logo" href="{{ route("index") }}">
                                 EDUVERIFIED
                             </a>
+                            <!--
                             <div class="powered-by">Powered by Zenith Academy</div>
+                            -->
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar"></span>

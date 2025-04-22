@@ -3,7 +3,7 @@
         <div class="card">
             <form wire:submit.prevent="store">
                 <div class="card-body">
-                    <h5 class="card-title">Student Choice Of Programme</h5>
+                    <h5 class="card-title">Student Choice Of Programme and Campus</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Please complete the required information below</h6>
 
                     <div class="row">
@@ -17,6 +17,18 @@
                                     @endforeach
                                 </select>
                                 @error('selectedCourse') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-sm-7 offset-sm-3 col-12 col-lg-7 mt-3">
+                            <div class="form-group">
+                                <label><b>Campus</b></label>
+                                <select required wire:model="selectedCampus" class="form-control">
+                                    <option>-Select Campus-</option>
+                                    @foreach($campuses as $campus)
+                                        <option value="{{ $campus['id'] }}">{{ $campus['name'] }} - {{ number_format($campus['fees'], 2) }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                     </div>

@@ -113,7 +113,7 @@
                                 <div class="card-header" id="heading-1">
                                     <h5 class="mb-0">
                                         <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" style="color:black" aria-controls="collapse-1">
-                                            WHY CHOOSE ADEKUNLE AJASIN UNIVERSITY AKUNGBA, FOR YOUR JUPEB PROGRAMME
+                                            WHY CHOOSE AHMAN PATEGI UNIVERSITY FOR YOUR IJMB PROGRAMME
                                         </a>
                                     </h5>
                                 </div>

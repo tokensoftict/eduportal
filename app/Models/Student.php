@@ -88,7 +88,8 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
         'password' => 'hashed',
         'status' => 'int',
         'application_fee_transaction_id' => 'int',
-        'acceptance_fee_transaction_id' => 'int'
+        'acceptance_fee_transaction_id' => 'int',
+        'campus_id' => 'int'
     ];
 
     protected $hidden = [
@@ -137,7 +138,8 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
         'application_fee_transaction_id',
         'acceptance_fee_transaction_id',
         'a_level_subjects',
-        'session'
+        'session',
+        'campus_id'
     ];
 
 
@@ -169,6 +171,11 @@ class Student extends  Authenticatable implements MustVerifyEmail, CanResetPassw
     public function gender()
     {
         return $this->belongsTo(Gender::class);
+    }
+
+    public function campus()
+    {
+        return $this->belongsTo(Campus::class);
     }
 
     public function local_govt()

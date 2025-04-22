@@ -16,13 +16,15 @@ new #[Layout('admin.app')] class extends Component {
     public $charges = 300;
     public array $paymentData;
     public  $asPaySchoolFee;
+    public array $installments = [];
 
     public function mount()
     {
         $user = auth()->user();
         $this->student = Student::find($user->student_id);
-        $this->paymentData = \App\Models\Fee::find(1)->toArray();
+        $this->paymentData = $this->student->campus->toArray();
         $this->paymentData = array_merge($this->paymentData, app(Settings::class)->all());
+        $this->paymentData['amount'] = $this->paymentData['fees'];
         $this->asPaySchoolFee = Transaction::where('paymentable_type',\App\Models\Fee::class)
                 ->where("paymentable_id", $this->paymentData['id'])
                 ->where('transactionable_type', User::class)
@@ -30,9 +32,22 @@ new #[Layout('admin.app')] class extends Component {
                 ->where("status", 4)
                 ->where('session', app(\App\Classes\Settings::class)->get("session"))
                 ->first();
-
+        for($i =1; $i <= $this->paymentData['noOfInstalments']; $i++) {
+            $this->installments[$i] = [
+                'amount' => ($this->paymentData['amount'] / $this->paymentData['noOfInstalments']),
+                'name' => $this->ordinal($i)."'s installment",
+                'id' => $i
+            ];
+        }
     }
 
+    public function ordinal($number) {
+        $ends = array('th','st','nd','rd','th','th','th','th','th','th');
+        if ((($number % 100) >= 11) && (($number%100) <= 13))
+            return $number. 'th';
+        else
+            return $number. $ends[$number % 10];
+    }
 
     public function generateTransaction()
     {
@@ -85,11 +100,26 @@ new #[Layout('admin.app')] class extends Component {
         <div class="col-sm-10 offset-1">
             <div class="card">
                 <div class="card-header">
+                    <h3 class="card-title"><strong>Select Installment</strong></h3>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <select class="form-control" wire:model="installment">
+                                @foreach($this->installments as $installment)
+                                    <option value="{{ $installment['id'] }}">{{ $installment['name'] }} - {{ number_format($installment['amount'],2) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-10 offset-1">
+            <div class="card">
+                <div class="card-header">
                     <h3 class="card-title"><strong>School Fees Payment</strong></h3>
                 </div>
                 <div class="card-body">
                     @if(!$asPaySchoolFee)
-
                         <table class="table table-bordered">
                             <tr>
                                 <th class="text-left">Student Name</th>
