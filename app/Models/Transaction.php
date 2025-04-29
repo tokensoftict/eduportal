@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $session
  * @property string $semester
  * @property string $gateway
+ * @property string $transaction_reference
  * @property bool $status
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
@@ -64,7 +65,8 @@ class Transaction extends Model
 		'semester',
 		'gateway',
 		'status',
-        'session'
+        'session',
+        'transaction_reference'
 	];
 
 

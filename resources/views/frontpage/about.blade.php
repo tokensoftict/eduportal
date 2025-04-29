@@ -31,16 +31,17 @@
                 <div class="col-lg-5">
                     <div class="section-title mt-50">
                         <h5>About us</h5>
-                        <h2>Welcome to Eduverified Portal, Powered By Zenith Academy </h2>
+                        <h2>Welcome to official web page for IJMB Programme, of Ahman Pategi University, Patigi, Kwara
+                            State. </h2>
                     </div> <!-- section title -->
                     <div class="about-cont">
-                        <p>Zenith Academy is a private educational institution that was established in 2010.</p>
-                        <p>We received full approval from the Kwara State Government’s Ministry of Tertiary Education and Agency for Mass Education in the year 2015. Ever since, we have positioned as leaders in the Nigerian advanced educational programme landscape.</p>
+                        <p>INTERIM JOINT MATRICULATION BOARD ( IJMB )</p>
+                        <p>IJMB-A- level programme is an advanced level course, basically for a year duration. Candidates undergoing the course are assumed to be in 100 level in the university, upon completion of the programme, candidates shall sit for national examination, conducted by IJMB examination body, with venue at Ahman Pategi University. The result of the examination, is what various candidates would use to obtain Direct Entry form ( DE ) from Jamb, in order to process 200 level admission into university of their choice.</p>
                     </div>
                 </div> <!-- about cont -->
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
-                        <img src="{{ asset('frontpage/images/about/about-2.jpg') }}" alt="About">
+                        <img src="{{ asset('img/aboutus.jpg') }}" alt="About">
                     </div>  <!-- about imag -->
                 </div>
             </div> <!-- row -->
@@ -49,7 +50,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-10">
                         <div class="about-singel-items mt-30">
                             <span>01</span>
-                            <h4>Why Choose us</h4>
+                            <h4>WHY CHOOSE AHMAN PATEGI UNIVERSITY</h4>
                             <p>We provide conducive learning environment, with seamless programme devoid of strike, candidates would have access to experienced and friendly instructors.</p>
                         </div> <!-- about singel -->
                     </div>
