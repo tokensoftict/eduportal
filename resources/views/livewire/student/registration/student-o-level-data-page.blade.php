@@ -94,6 +94,7 @@
                                                     <option>D7</option>
                                                     <option>E8</option>
                                                     <option>F9</option>
+                                                    <option>A.R</option>
                                                 </select>
                                             </td>
                                         </tr>
