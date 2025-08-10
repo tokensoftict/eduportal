@@ -61,6 +61,7 @@ Route::prefix('admin')->group(function() {
 
         Volt::route('/student', 'admin.pages.student.index')->name('student.index');
         Volt::route('/student/{student}/show', 'admin.pages.student.show')->name('student.show');
+        Volt::route('/student/{student}/transaction', 'admin.pages.student.transaction')->name('student.transaction');
 
         Route::get('/student/{student}/admit', ['as' => 'student.admit', 'uses' => 'App\Http\Controllers\Admin\AdminDashboardController@admit_student']);
         Route::get('/student/{student}/reject', ['as' => 'student.reject', 'uses' => 'App\Http\Controllers\Admin\AdminDashboardController@reject_student']);

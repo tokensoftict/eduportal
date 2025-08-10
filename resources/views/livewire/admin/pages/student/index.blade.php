@@ -117,6 +117,7 @@ new #[Layout('admin.app')] class extends Component {
                                 <td>{{ Carbon\Carbon::parse($student->updated_at)->toDayDateTimeString() }}</td>
                                 <td>
                                  <a href="{{ route('student.show', $student->id) }}" class="btn btn-primary btn-sm">View</a>
+                                    <a href="{{ route('student.transaction', $student->id) }}" class="btn btn-success btn-sm">Transactions</a>
                                 </td>
                             </tr>
                         @endforeach
