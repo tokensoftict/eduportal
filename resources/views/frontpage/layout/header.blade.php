@@ -22,7 +22,7 @@
     <div class="header-top d-none d-md-block">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-9">
+                <div class="col-lg-11">
                     <div class="header-contact text-lg-left text-center">
                         <ul>
                             <li><img src="{{ asset("frontpage/images/all-icon/call.png") }}" alt="icon"><span>+2348034983798</span></li>
@@ -31,7 +31,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-1">
                     <div class="header-social text-lg-right text-center">
                         <ul>
                             <li><a href="https://www.facebook.com/zenithalevels"><i class="fa fa-facebook-f"></i></a></li>
