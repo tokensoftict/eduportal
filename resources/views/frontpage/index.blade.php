@@ -172,7 +172,7 @@
                                 <div class="card-header" id="heading-3">
                                     <h5 class="mb-0">
                                         <a role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="true" style="color:black" aria-controls="collapse-3">
-                                            REGISTRATION PROCEDURES FOR THE JUPEB PROGRAMME
+                                            REGISTRATION PROCEDURES FOR THE IJMB PROGRAMME
                                         </a>
                                     </h5>
                                 </div>
@@ -196,8 +196,8 @@
                                             </p>
                                             <h6 class="mt-3 mb-3">NOTE ON FEES PAYABLE</h6>
                                             <p>Application Form is N 10,000 ( Ten Thousand Naira Only )</p>
-                                            <p>Admission Acceptance is N 40,000 ( Forty Thousand Naira Only )</p>
-                                            <p>School Fees is N 150,000 ( One hundred and Fifty Thousand Naira Only )</p>
+                                            <p>Admission Acceptance is N 41,000 ( Forty One Thousand Naira Only )</p>
+                                            <p>School Fees is N 172,000 ( One hundred and Seventy Tow Thousand Naira Only )</p>
                                         </div>
 
 

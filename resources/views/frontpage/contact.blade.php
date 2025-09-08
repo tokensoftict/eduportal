@@ -90,9 +90,7 @@
                                         <i class="fa fa-location-arrow"></i>
                                     </div>
                                     <div class="cont">
-                                        <p>Kwara State Library Complex,
-                                            No 1, Zulu Gambari road,
-                                            Ilorin, Kwara State.
+                                        <p>Liaison office : Ahman Pategi University mini campus, Flower Garden, GRA, Ilorin
                                         </p>
                                     </div>
                                 </div> <!-- singel address -->
