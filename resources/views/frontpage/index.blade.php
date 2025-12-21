@@ -146,7 +146,7 @@
                                         <div class="section-title mt-20">
                                             <p>
                                                 <b>i.All eligible candidates must not be less than 15 years at the commencement of the
-                                                    2025/2026 academic session</b>
+                                                    2026/2027 academic session</b>
                                             </p>
                                             <p>
                                                 ii. Candidates are advised to correctly upload all their O’Level results on the portal. A
