@@ -80,7 +80,7 @@ new #[Layout('admin.app')] class extends Component {
                     ->where('transactionable_type', User::class)
                     ->where('transactionable_id', auth()->id())
                     ->where("status", 4)
-                    ->where('session', app(\App\Classes\Settings::class)->get("session"))
+                   // ->where('session', app(\App\Classes\Settings::class)->get("session"))
                     ->where('transaction_reference', $fee['payment_id'])
                     ->first();
                 if(!$check) {
@@ -127,7 +127,7 @@ new #[Layout('admin.app')] class extends Component {
                     ->where('transactionable_type', User::class)
                     ->where('transactionable_id', auth()->id())
                     ->where("status", 4)
-                    ->where('session', app(\App\Classes\Settings::class)->get("session"))
+                    //->where('session', app(\App\Classes\Settings::class)->get("session"))
                     ->where('transaction_reference', $fee['payment_id'])
                     ->first();
                 if(!$check) {
